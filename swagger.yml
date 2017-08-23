@@ -204,6 +204,10 @@ paths:
       operationId: accounts.getAllAccounts
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -240,6 +244,10 @@ paths:
       operationId: accounts.count
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -325,6 +333,10 @@ paths:
       operationId: blocks.getEpoch
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -337,6 +349,10 @@ paths:
       operationId: blocks.getHeight
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -349,6 +365,10 @@ paths:
       operationId: blocks.getNethash
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -361,6 +381,10 @@ paths:
       operationId: blocks.getFee
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -373,6 +397,10 @@ paths:
       operationId: blocks.getFees
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -385,6 +413,10 @@ paths:
       operationId: blocks.getMilestone
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -397,6 +429,10 @@ paths:
       operationId: blocks.getReward
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -409,6 +445,10 @@ paths:
       operationId: blocks.getSupply
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -421,6 +461,10 @@ paths:
       operationId: blocks.getStatus
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -686,6 +730,10 @@ paths:
       operationId: loader.status
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -698,6 +746,10 @@ paths:
       operationId: loader.sync
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -710,6 +762,10 @@ paths:
       operationId: loader.autoconfigure
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -799,6 +855,10 @@ paths:
       operationId: multisignature.getAccounts
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -881,6 +941,10 @@ paths:
       operationId: peers.version
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -1091,6 +1155,10 @@ paths:
       operationId: transport.listBroadcastPeers
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -1166,6 +1234,10 @@ paths:
       operationId: transport.getTransactions
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -1222,6 +1294,10 @@ paths:
       operationId: transport.height
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -1234,6 +1310,10 @@ paths:
       operationId: transport.status
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
