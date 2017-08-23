@@ -89,9 +89,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsGetBalanceApiResponse'
   "/api/accounts/getPublickey":
     get:
       tags:
@@ -110,9 +111,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsGetPublickeyApiResponse'
   "/api/accounts/delegates/fee":
     get:
       tags:
@@ -126,9 +128,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsGetDelegatesFeeApiResponse'
   "/api/accounts/delegates":
     get:
       tags:
@@ -154,9 +157,10 @@ paths:
         name: offset
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsGetDelegatesApiResponse'
     put:
       tags:
       - Account
@@ -175,9 +179,10 @@ paths:
         schema:
           $ref: '#/definitions/AccountDelegate'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsAddDelegatesApiResponse'
   "/api/accounts":
     get:
       tags:
@@ -196,9 +201,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsGetAccountApiResponse'
   "/api/accounts/getAllAccounts":
     get:
       tags:
@@ -212,9 +218,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsGetAllAccountsApiResponse'
   "/api/accounts/top":
     get:
       tags:
@@ -236,9 +243,10 @@ paths:
         name: offset
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsTopApiResponse'
   "/api/accounts/count":
     get:
       tags:
@@ -252,9 +260,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/AccountsCountApiResponse'
   "/api/blocks/get":
     get:
       tags:
@@ -273,9 +282,10 @@ paths:
         description: 'Get all blocks'
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetBlockApiResponse'
   "/api/blocks":
     get:
       tags:
@@ -325,9 +335,10 @@ paths:
         name: height
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetBlocksApiResponse'
   "/api/blocks/getEpoch":
     get:
       tags:
@@ -341,9 +352,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetEpochApiResponse'
   "/api/blocks/getHeight":
     get:
       tags:
@@ -357,9 +369,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetHeightApiResponse'
   "/api/blocks/getNethash":
     get:
       tags:
@@ -373,9 +386,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetNethashApiResponse'
   "/api/blocks/getFee":
     get:
       tags:
@@ -389,9 +403,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetFeeApiResponse'
   "/api/blocks/getFees":
     get:
       tags:
@@ -405,9 +420,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetFeesApiResponse'
   "/api/blocks/getMilestone":
     get:
       tags:
@@ -421,9 +437,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetMilestoneApiResponse'
   "/api/blocks/getReward":
     get:
       tags:
@@ -437,9 +454,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetRewardApiResponse'
   "/api/blocks/getSupply":
     get:
       tags:
@@ -453,9 +471,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetSupplyApiResponse'
   "/api/blocks/getStatus":
     get:
       tags:
@@ -469,9 +488,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/BlocksGetStatusApiResponse'
   "/api/delegates/count":
     get:
       tags:
@@ -490,9 +510,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesCountApiResponse'
   "/api/delegates/search":
     get:
       tags:
@@ -515,9 +536,10 @@ paths:
         name: limit
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesSearchApiResponse'
   "/api/delegates/voters":
     get:
       tags:
@@ -536,9 +558,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesGetVotersApiResponse'
   "/api/delegates/get":
     get:
       tags:
@@ -560,9 +583,10 @@ paths:
         name: username
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesGetDelegateApiResponse'
   "/api/delegates":
     get:
       tags:
@@ -588,9 +612,10 @@ paths:
         name: offset
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesGetDelegatesApiResponse'
     put:
       tags:
       - Delegate
@@ -609,9 +634,10 @@ paths:
         schema:
           $ref: '#/definitions/Delegate'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesAddDelegateApiResponse'
   "/api/delegates/fee":
     get:
       tags:
@@ -630,9 +656,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesGetFeeApiResponse'
   "/api/delegates/forging/getForgedByAccount":
     get:
       tags:
@@ -651,9 +678,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesGetForgedByAccountApiResponse'
   "/api/delegates/getNextForgers":
     get:
       tags:
@@ -672,9 +700,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesGetNextForgersApiResponse'
   "/api/delegates/forging/enable":
     post:
       tags:
@@ -697,9 +726,10 @@ paths:
         name: publicKey
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesEnableForgingApiResponse'
   "/api/delegates/forging/disable":
     post:
       tags:
@@ -722,9 +752,10 @@ paths:
         name: publicKey
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/DelegatesDisableForgingApiResponse'
   "/api/loader/status":
     get:
       tags:
@@ -738,9 +769,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/LoaderStatusApiResponse'
   "/api/loader/status/sync":
     get:
       tags:
@@ -754,9 +786,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/LoaderSyncApiResponse'
   "/api/loader/autoconfigure":
     get:
       tags:
@@ -770,9 +803,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/LoaderAutoconfigureApiResponse'
   "/api/multisignatures/pending":
     get:
       tags:
@@ -791,9 +825,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/MultisignaturesPendingApiResponse'
   "/api/multisignatures/sign":
     post:
       tags:
@@ -825,9 +860,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/MultisignaturesSignApiResponse'
   "/api/multisignatures":
     put:
       tags:
@@ -847,9 +883,10 @@ paths:
         schema:
           $ref: '#/definitions/MultiSignature'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/MultisignaturesAddMultisignatureApiResponse'
   "/api/multisignatures/accounts":
     get:
       tags:
@@ -863,9 +900,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/MultisignatureGetAccountsApiResponse'
   "/api/peers/get":
     get:
       tags:
@@ -889,9 +927,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/PeersGetPeerApiResponse'
   "/api/peers":
     get:
       tags:
@@ -933,9 +972,10 @@ paths:
         name: offset
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/PeersGetPeersApiResponse'
   "/api/peers/version":
     get:
       tags:
@@ -949,9 +989,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/PeersVersionApiResponse'
   "/api/signatures/fee":
     get:
       tags:
@@ -970,9 +1011,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/SignaturesFeeApiResponse'
   "/api/signatures":
     put:
       tags:
@@ -992,9 +1034,10 @@ paths:
         schema:
           $ref: '#/definitions/Signature'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/SignaturesAddSignatureApiResponse'
   "/api/transactions/get":
     get:
       tags:
@@ -1013,9 +1056,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransactionsGetTransactionApiResponse'
   "/api/transactions":
     get:
       tags:
@@ -1081,9 +1125,10 @@ paths:
         name: fee
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransactionsGetTransactionsApiResponse'
     put:
       tags:
       - Transaction
@@ -1102,9 +1147,10 @@ paths:
         schema:
           $ref: '#/definitions/Transaction'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransactionsAddTransactionsApiResponse'
   "/api/transactions/unconfirmed/get":
     get:
       tags:
@@ -1123,9 +1169,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransactionsGetUnconfirmedTransactionApiResponse'
   "/api/transactions/unconfirmed":
     get:
       tags:
@@ -1147,9 +1194,10 @@ paths:
         name: address
         description: ''
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransactionsGetUnconfirmedTransactionsApiResponse'
   "/peer/list":
     get:
       tags:
@@ -1163,9 +1211,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportListBroadcastPeersApiResponse'
   "/peer/blocks/common":
     get:
       tags:
@@ -1184,9 +1233,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportCommonBlockApiResponse'
   "/peer/block":
     get:
       tags:
@@ -1205,9 +1255,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportGetBlockApiResponse'
   "/peer/blocks":
     get:
       tags:
@@ -1226,9 +1277,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportGetBlocksApiResponse'
   "/peer/transactions":
     get:
       tags:
@@ -1242,9 +1294,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportGetTransactionsApiResponse'
     post:
       tags:
       - Transport
@@ -1265,9 +1318,10 @@ paths:
           items:
             $ref: '#/definitions/TransportTransaction'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportAddTransactionsApiResponse'
   "/peer/transactionsFromIds":
     get:
       tags:
@@ -1286,9 +1340,10 @@ paths:
         description: ''
         required: true
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportTransactionsFromIdsApiResponse'
   "/peer/height":
     get:
       tags:
@@ -1302,9 +1357,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportHeightApiResponse'
   "/peer/status":
     get:
       tags:
@@ -1318,11 +1374,17 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
-        '200':
-          description: ''
-          schema: {}
+        200:
+          description: successful operation
+          schema:
+            $ref: '#/definitions/TransportStatusApiResponse'
 
 definitions:
+
+####################################################################################################
+## Request Object Definitions ######################################################################
+####################################################################################################
+
   AccountDelegate:
     type: object
     properties:
@@ -1335,6 +1397,7 @@ definitions:
       secondSecret:
         type: string
         description: ''
+
   Delegate:
     type: object
     properties:
@@ -1354,6 +1417,7 @@ definitions:
         type: string
         description: ''
         # required: true
+
   MultiSignature:
     type: object
     properties:
@@ -1381,6 +1445,7 @@ definitions:
         # required: true
         items:
           type: string
+
   Signature:
     type: object
     properties:
@@ -1400,6 +1465,7 @@ definitions:
         type: string
         description: ''
         # required: true
+
   Transaction:
     type: object
     properties:
@@ -1427,6 +1493,7 @@ definitions:
       multisigAccountPublicKey:
         type: string
         description: ''
+
   TransportTransaction:
     type: object
     properties:
@@ -1434,3 +1501,244 @@ definitions:
         type: array
         description: ''
         # required: true
+
+####################################################################################################
+## Response Object Definitions #####################################################################
+####################################################################################################
+
+  AccountsGetBalanceApiResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: 'asd'
+        balance:
+          type: integer
+          description: 'asd'
+        unconfirmedBalance:
+          type: integer
+          description: 'asd'
+
+  AccountsGetPublickeyApiResponse:
+      type: object
+      properties: {}
+
+  AccountsGetDelegatesFeeApiResponse:
+      type: object
+      properties: {}
+
+  AccountsGetDelegatesApiResponse:
+      type: object
+      properties: {}
+
+  AccountsAddDelegatesApiResponse:
+      type: object
+      properties: {}
+
+  AccountsGetAccountApiResponse:
+      type: object
+      properties: {}
+
+  AccountsGetAllAccountsApiResponse:
+      type: object
+      properties: {}
+
+  AccountsTopApiResponse:
+      type: object
+      properties: {}
+
+  AccountsCountApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetBlockApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetBlocksApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetEpochApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetHeightApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetNethashApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetFeeApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetFeesApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetMilestoneApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetRewardApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetSupplyApiResponse:
+      type: object
+      properties: {}
+
+  BlocksGetStatusApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesCountApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesSearchApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesGetVotersApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesGetDelegateApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesGetDelegatesApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesAddDelegateApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesGetFeeApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesGetForgedByAccountApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesGetNextForgersApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesEnableForgingApiResponse:
+      type: object
+      properties: {}
+
+  DelegatesDisableForgingApiResponse:
+      type: object
+      properties: {}
+
+  LoaderStatusApiResponse:
+      type: object
+      properties: {}
+
+  LoaderSyncApiResponse:
+      type: object
+      properties: {}
+
+  LoaderAutoconfigureApiResponse:
+      type: object
+      properties: {}
+
+  MultisignaturesPendingApiResponse:
+      type: object
+      properties: {}
+
+  MultisignaturesSignApiResponse:
+      type: object
+      properties: {}
+
+  MultisignaturesAddMultisignatureApiResponse:
+      type: object
+      properties: {}
+
+  MultisignatureGetAccountsApiResponse:
+      type: object
+      properties: {}
+
+  PeersGetPeerApiResponse:
+      type: object
+      properties: {}
+
+  PeersGetPeersApiResponse:
+      type: object
+      properties: {}
+
+  PeersVersionApiResponse:
+      type: object
+      properties: {}
+
+  SignaturesFeeApiResponse:
+      type: object
+      properties: {}
+
+  SignaturesAddSignatureApiResponse:
+      type: object
+      properties: {}
+
+  TransactionsGetTransactionApiResponse:
+      type: object
+      properties: {}
+
+  TransactionsGetTransactionsApiResponse:
+      type: object
+      properties: {}
+
+  TransactionsAddTransactionsApiResponse:
+      type: object
+      properties: {}
+
+  TransactionsGetUnconfirmedTransactionApiResponse:
+      type: object
+      properties: {}
+
+  TransactionsGetUnconfirmedTransactionsApiResponse:
+      type: object
+      properties: {}
+
+  TransportListBroadcastPeersApiResponse:
+      type: object
+      properties: {}
+
+  TransportCommonBlockApiResponse:
+      type: object
+      properties: {}
+
+  TransportGetBlockApiResponse:
+      type: object
+      properties: {}
+
+  TransportGetBlocksApiResponse:
+      type: object
+      properties: {}
+
+  TransportGetTransactionsApiResponse:
+      type: object
+      properties: {}
+
+  TransportAddTransactionsApiResponse:
+      type: object
+      properties: {}
+
+  TransportTransactionsFromIdsApiResponse:
+      type: object
+      properties: {}
+
+  TransportHeightApiResponse:
+      type: object
+      properties: {}
+
+  TransportStatusApiResponse:
+      type: object
+      properties: {}
