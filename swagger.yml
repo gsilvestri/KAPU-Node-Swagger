@@ -177,7 +177,7 @@ paths:
         description: ''
         required: true
         schema:
-          $ref: '#/definitions/AccountDelegate'
+          $ref: '#/definitions/AccountsAddDelegatesRequest'
       responses:
         200:
           description: successful operation
@@ -632,7 +632,7 @@ paths:
         description: ''
         required: true
         schema:
-          $ref: '#/definitions/Delegate'
+          $ref: '#/definitions/DelegatesAddDelegateRequest'
       responses:
         200:
           description: successful operation
@@ -881,7 +881,7 @@ paths:
         description: ''
         required: true
         schema:
-          $ref: '#/definitions/MultiSignature'
+          $ref: '#/definitions/MultisignaturesAddMultisignatureRequest'
       responses:
         200:
           description: successful operation
@@ -1032,7 +1032,7 @@ paths:
         description: ''
         required: true
         schema:
-          $ref: '#/definitions/Signature'
+          $ref: '#/definitions/SignaturesAddSignatureRequest'
       responses:
         200:
           description: successful operation
@@ -1145,7 +1145,7 @@ paths:
         description: ''
         required: true
         schema:
-          $ref: '#/definitions/Transaction'
+          $ref: '#/definitions/TransactionsAddTransactionsRequest'
       responses:
         200:
           description: successful operation
@@ -1316,7 +1316,7 @@ paths:
         schema:
           type: array
           items:
-            $ref: '#/definitions/TransportTransaction'
+            $ref: '#/definitions/TransportAddTransactionsRequest'
       responses:
         200:
           description: successful operation
@@ -1381,12 +1381,32 @@ paths:
 
 definitions:
 
+
 ####################################################################################################
 ## Request Object Definitions ######################################################################
 ####################################################################################################
 
-  AccountDelegate:
+  # AccountsGetBalanceRequest:
+  #   type: object
+  #   properties: {}
+
+  # AccountsGetPublickeyRequest:
+  #   type: object
+  #   properties: {}
+
+  # AccountsGetDelegatesFeeRequest:
+  #   type: object
+  #   properties: {}
+
+  # AccountsGetDelegatesRequest:
+  #   type: object
+  #   properties: {}
+
+  AccountsAddDelegatesRequest:
     type: object
+    required:
+    - secret
+    - publicKey
     properties:
       secret:
         type: string
@@ -1398,33 +1418,153 @@ definitions:
         type: string
         description: ''
 
-  Delegate:
+  # AccountsGetAccountRequest:
+  #   type: object
+  #   properties: {}
+
+  # AccountsGetAllAccountsRequest:
+  #   type: object
+  #   properties: {}
+
+  # AccountsTopRequest:
+  #   type: object
+  #   properties: {}
+
+  # AccountsCountRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetBlockRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetBlocksRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetEpochRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetHeightRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetNethashRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetFeeRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetFeesRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetMilestoneRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetRewardRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetSupplyRequest:
+  #   type: object
+  #   properties: {}
+
+  # BlocksGetStatusRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesCountRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesSearchRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesGetVotersRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesGetDelegateRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesGetDelegatesRequest:
+  #   type: object
+  #   properties: {}
+
+  DelegatesAddDelegateRequest:
     type: object
     properties:
       secret:
         type: string
         description: ''
-        # required: true
       publicKey:
         type: string
         description: ''
-        # required: true
       secondSecret:
         type: string
         description: ''
-        # required: true
       username:
         type: string
         description: ''
-        # required: true
 
-  MultiSignature:
+  # DelegatesGetFeeRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesGetForgedByAccountRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesGetNextForgersRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesEnableForgingRequest:
+  #   type: object
+  #   properties: {}
+
+  # DelegatesDisableForgingRequest:
+  #   type: object
+  #   properties: {}
+
+  # LoaderStatusRequest:
+  #   type: object
+  #   properties: {}
+
+  # LoaderSyncRequest:
+  #   type: object
+  #   properties: {}
+
+  # LoaderAutoconfigureRequest:
+  #   type: object
+  #   properties: {}
+
+  # MultisignaturesPendingRequest:
+  #   type: object
+  #   properties: {}
+
+  # MultisignaturesSignRequest:
+  #   type: object
+  #   properties: {}
+
+  MultisignaturesAddMultisignatureRequest:
     type: object
+    required:
+    - secret
+    - min
+    - lifetime
+    - keysgroup
     properties:
       secret:
         type: string
         description: ''
-        # required: true
       publicKey:
         type: string
         description: ''
@@ -1434,53 +1574,80 @@ definitions:
       min:
         type: string
         description: ''
-        # required: true
       lifetime:
         type: string
         description: ''
-        # required: true
       keysgroup:
         type: array
         description: ''
-        # required: true
         items:
           type: string
 
-  Signature:
+  # MultisignatureGetAccountsRequest:
+  #   type: object
+  #   properties: {}
+
+  # PeersGetPeerRequest:
+  #   type: object
+  #   properties: {}
+
+  # PeersGetPeersRequest:
+  #   type: object
+  #   properties: {}
+
+  # PeersVersionRequest:
+  #   type: object
+  #   properties: {}
+
+  # SignaturesFeeRequest:
+  #   type: object
+  #   properties: {}
+
+  SignaturesAddSignatureRequest:
     type: object
+    required:
+    - secret
+    - secondSecret
+    - publicKey
+    - multisigAccountPublicKey
     properties:
       secret:
         type: string
         description: ''
-        # required: true
       secondSecret:
         type: string
         description: ''
-        # required: true
       publicKey:
         type: string
         description: ''
-        # required: true
       multisigAccountPublicKey:
         type: string
         description: ''
-        # required: true
 
-  Transaction:
+  # TransactionsGetTransactionRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransactionsGetTransactionsRequest:
+  #   type: object
+  #   properties: {}
+
+  TransactionsAddTransactionsRequest:
     type: object
+    required:
+    - secret
+    - amount
+    - recipientId
     properties:
       secret:
         type: string
         description: ''
-        # required: true
       amount:
         type: integer
         description: ''
-        # required: true
       recipientId:
         type: string
         description: ''
-        # required: true
       vendorField:
         type: string
         description: ''
@@ -1494,13 +1661,54 @@ definitions:
         type: string
         description: ''
 
-  TransportTransaction:
+  # TransactionsGetUnconfirmedTransactionRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransactionsGetUnconfirmedTransactionsRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportListBroadcastPeersRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportCommonBlockRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportGetBlockRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportGetBlocksRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportGetTransactionsRequest:
+  #   type: object
+  #   properties: {}
+
+  TransportAddTransactionsRequest:
     type: object
+    required:
+    - transactions
     properties:
       transactions:
         type: array
         description: ''
-        # required: true
+
+  # TransportTransactionsFromIdsRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportHeightRequest:
+  #   type: object
+  #   properties: {}
+
+  # TransportStatusRequest:
+  #   type: object
+  #   properties: {}
 
 ####################################################################################################
 ## Response Object Definitions #####################################################################
@@ -1520,225 +1728,234 @@ definitions:
           description: 'asd'
 
   AccountsGetPublickeyResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   AccountsGetDelegatesFeeResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   AccountsGetDelegatesResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   AccountsAddDelegatesResponse:
-      type: object
-      properties: {}
+    type: object
+    properties:
+      secret:
+        type: string
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      secondSecret:
+        type: string
+        description: ''
 
   AccountsGetAccountResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   AccountsGetAllAccountsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   AccountsTopResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   AccountsCountResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetBlockResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetBlocksResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetEpochResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetHeightResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetNethashResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetFeeResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetFeesResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetMilestoneResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetRewardResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetSupplyResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   BlocksGetStatusResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesCountResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesSearchResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesGetVotersResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesGetDelegateResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesGetDelegatesResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesAddDelegateResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesGetFeeResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesGetForgedByAccountResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesGetNextForgersResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesEnableForgingResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   DelegatesDisableForgingResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   LoaderStatusResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   LoaderSyncResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   LoaderAutoconfigureResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   MultisignaturesPendingResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   MultisignaturesSignResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   MultisignaturesAddMultisignatureResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   MultisignatureGetAccountsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   PeersGetPeerResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   PeersGetPeersResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   PeersVersionResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   SignaturesFeeResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   SignaturesAddSignatureResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransactionsGetTransactionResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransactionsGetTransactionsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransactionsAddTransactionsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransactionsGetUnconfirmedTransactionResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransactionsGetUnconfirmedTransactionsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportListBroadcastPeersResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportCommonBlockResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportGetBlockResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportGetBlocksResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportGetTransactionsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportAddTransactionsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportTransactionsFromIdsResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportHeightResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
 
   TransportStatusResponse:
-      type: object
-      properties: {}
+    type: object
+    properties: {}
