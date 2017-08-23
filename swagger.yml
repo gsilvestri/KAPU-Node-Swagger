@@ -22,7 +22,7 @@ parameters:
   portHeader:
     name: port
     in: header
-    type: string
+    type: integer
     default: 4001
     required: true
     minLength: 1
