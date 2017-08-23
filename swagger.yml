@@ -13,6 +13,40 @@ basePath: "/"
 schemes:
 - https
 
+parameters:
+  ipHeader:
+    name: ip
+    in: header
+    type: string
+
+  portHeader:
+    name: port
+    in: header
+    type: string
+    required: true
+    minLength: 1
+    maxLength: 65535
+
+  osHeader:
+    name: os
+    in: header
+    type: string
+    maxLength: 64
+
+  nethashHeader:
+    name: nethash
+    in: header
+    type: string
+    required: true
+    maxLength: 64
+
+  versionHeader:
+    name: version
+    in: header
+    type: string
+    required: true
+    maxLength: 11
+
 tags:
 - name: Account
   description: ''
