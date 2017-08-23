@@ -32,8 +32,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get the balance of an account'
       operationId: accounts.getBalance
       parameters:
       - in: query
@@ -49,8 +48,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get the public key of an account'
       operationId: accounts.getPublickey
       produces:
       - application/json
@@ -68,8 +66,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get the delegate fee of an account'
       operationId: accounts.getDelegatesFee
       produces:
       - application/json
@@ -81,8 +78,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get the delegates of an account'
       operationId: accounts.getDelegates
       produces:
       - application/json
@@ -106,8 +102,7 @@ paths:
     put:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Add a new delegate to an account'
       operationId: accounts.addDelegates
       produces:
       - application/json
@@ -126,8 +121,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Returns account information of an address'
       operationId: accounts.getAccount
       produces:
       - application/json
@@ -145,8 +139,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get a list of accounts'
       operationId: accounts.getAllAccounts
       produces:
       - application/json
@@ -158,8 +151,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get a list of top accounts'
       operationId: accounts.top
       produces:
       - application/json
@@ -180,8 +172,7 @@ paths:
     get:
       tags:
       - Account
-      summary: ''
-      description: ''
+      summary: 'Get the count of accounts'
       operationId: accounts.count
       produces:
       - application/json
@@ -193,8 +184,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get block by id'
       operationId: blocks.getBlock
       produces:
       - application/json
@@ -202,7 +192,7 @@ paths:
       - in: query
         type: string
         name: id
-        description: ''
+        description: 'Get all blocks'
         required: true
       responses:
         '200':
@@ -212,8 +202,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get all blocks'
       operationId: blocks.getBlocks
       produces:
       - application/json
@@ -262,8 +251,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain epoch'
       operationId: blocks.getEpoch
       produces:
       - application/json
@@ -275,8 +263,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain height'
       operationId: blocks.getHeight
       produces:
       - application/json
@@ -288,8 +275,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain nethash'
       operationId: blocks.getNethash
       produces:
       - application/json
@@ -301,8 +287,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the transaction fee for sending "normal" transactions'
       operationId: blocks.getFee
       produces:
       - application/json
@@ -314,8 +299,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the network fees'
       operationId: blocks.getFees
       produces:
       - application/json
@@ -327,8 +311,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain milestone'
       operationId: blocks.getMilestone
       produces:
       - application/json
@@ -340,8 +323,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain reward'
       operationId: blocks.getReward
       produces:
       - application/json
@@ -353,8 +335,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain supply'
       operationId: blocks.getSupply
       produces:
       - application/json
@@ -366,8 +347,7 @@ paths:
     get:
       tags:
       - Block
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain status'
       operationId: blocks.getStatus
       produces:
       - application/json
@@ -379,8 +359,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get the count of delegates'
       operationId: delegates.count
       produces:
       - application/json
@@ -398,8 +377,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Search for specific delegates'
       operationId: delegates.search
       produces:
       - application/json
@@ -421,8 +399,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get a list of voters for a delegate'
       operationId: delegates.getVoters
       produces:
       - application/json
@@ -440,8 +417,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get a single delegate'
       operationId: delegates.getDelegate
       produces:
       - application/json
@@ -462,8 +438,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get all delegates'
       operationId: delegates.getDelegates
       produces:
       - application/json
@@ -487,8 +462,7 @@ paths:
     put:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Create a new delegate'
       operationId: delegates.addDelegate
       produces:
       - application/json
@@ -507,8 +481,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get the delegate fee'
       operationId: delegates.getFee
       produces:
       - application/json
@@ -526,8 +499,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get the amount of ARKs forged by an account'
       operationId: delegates.getForgedByAccount
       produces:
       - application/json
@@ -545,8 +517,7 @@ paths:
     get:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Get the next forger'
       operationId: delegates.getNextForgers
       produces:
       - application/json
@@ -564,8 +535,7 @@ paths:
     post:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Enable forging for a delegate'
       operationId: delegates.enableForging
       produces:
       - application/json
@@ -587,8 +557,7 @@ paths:
     post:
       tags:
       - Delegate
-      summary: ''
-      description: ''
+      summary: 'Disable forging for a delegate'
       operationId: delegates.disableForging
       produces:
       - application/json
@@ -610,9 +579,8 @@ paths:
     get:
       tags:
       - Loader
-      summary: ''
-      description: ''
-      operationId: signature.status
+      summary: 'Get the blockchain status'
+      operationId: loader.status
       produces:
       - application/json
       responses:
@@ -623,9 +591,8 @@ paths:
     get:
       tags:
       - Loader
-      summary: ''
-      description: ''
-      operationId: signature.sync
+      summary: 'Get the synchronisation status of the client'
+      operationId: loader.sync
       produces:
       - application/json
       responses:
@@ -636,9 +603,8 @@ paths:
     get:
       tags:
       - Loader
-      summary: ''
-      description: ''
-      operationId: signature.autoconfigure
+      summary: 'Auto-configure the client loader'
+      operationId: loader.autoconfigure
       produces:
       - application/json
       responses:
@@ -649,8 +615,7 @@ paths:
     get:
       tags:
       - MultiSignature
-      summary: ''
-      description: ''
+      summary: 'Get pending multi signature transactions'
       operationId: multisignatures.pending
       produces:
       - application/json
@@ -668,8 +633,7 @@ paths:
     post:
       tags:
       - MultiSignature
-      summary: ''
-      description: ''
+      summary: 'Sign a new multi signature'
       operationId: multisignatures.sign
       produces:
       - application/json
@@ -696,12 +660,30 @@ paths:
         '200':
           description: ''
           schema: {}
+  "/api/multisignatures":
+    put:
+      tags:
+      - MultiSignature
+      summary: 'Create a new multi signature'
+      operationId: multisignatures.addMultisignature
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: ''
+        required: true
+        schema:
+          $ref: '#/definitions/MultiSignature'
+      responses:
+        '200':
+          description: ''
+          schema: {}
   "/api/multisignatures/accounts":
     get:
       tags:
       - MultiSignature
-      summary: ''
-      description: ''
+      summary: 'Get a list of accounts'
       operationId: multisignature.getAccounts
       produces:
       - application/json
@@ -713,8 +695,7 @@ paths:
     get:
       tags:
       - Peer
-      summary: ''
-      description: ''
+      summary: 'Get a single peer'
       operationId: peers.getPeer
       produces:
       - application/json
@@ -737,8 +718,7 @@ paths:
     get:
       tags:
       - Peer
-      summary: ''
-      description: ''
+      summary: 'Get all peers'
       operationId: peers.getPeers
       produces:
       - application/json
@@ -779,8 +759,7 @@ paths:
     get:
       tags:
       - Peer
-      summary: ''
-      description: ''
+      summary: 'Get the peer version'
       operationId: peers.version
       produces:
       - application/json
@@ -792,8 +771,7 @@ paths:
     get:
       tags:
       - Signature
-      summary: ''
-      description: ''
+      summary: 'Get the fee for a signature'
       operationId: signatures.fee
       produces:
       - application/json
@@ -807,12 +785,30 @@ paths:
         '200':
           description: ''
           schema: {}
+  "/api/signatures":
+    put:
+      tags:
+      - Signature
+      summary: 'Create a new signature'
+      operationId: signatures.addSignature
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: body
+        description: ''
+        required: true
+        schema:
+          $ref: '#/definitions/Signature'
+      responses:
+        '200':
+          description: ''
+          schema: {}
   "/api/transactions/get":
     get:
       tags:
       - Transaction
-      summary: ''
-      description: ''
+      summary: 'Get a single transaction'
       operationId: transactions.getTransaction
       produces:
       - application/json
@@ -830,8 +826,7 @@ paths:
     get:
       tags:
       - Transaction
-      summary: ''
-      description: ''
+      summary: 'Get all transactions'
       operationId: transactions.getTransactions
       produces:
       - application/json
@@ -895,8 +890,7 @@ paths:
     put:
       tags:
       - Transaction
-      summary: ''
-      description: ''
+      summary: 'Create a new transaction'
       operationId: transactions.addTransactions
       produces:
       - application/json
@@ -915,8 +909,7 @@ paths:
     get:
       tags:
       - Transaction
-      summary: ''
-      description: ''
+      summary: 'Get a single unconfirmed transaction'
       operationId: transactions.getUnconfirmedTransaction
       produces:
       - application/json
@@ -934,8 +927,7 @@ paths:
     get:
       tags:
       - Transaction
-      summary: ''
-      description: ''
+      summary: 'Get all unconfirmed transactions'
       operationId: transactions.getUnconfirmedTransactions
       produces:
       - application/json
@@ -952,52 +944,11 @@ paths:
         '200':
           description: ''
           schema: {}
-  "/api/multisignatures":
-    put:
-      tags:
-      - MultiSignature
-      summary: ''
-      description: ''
-      operationId: multisignatures.addMultisignature
-      produces:
-      - application/json
-      parameters:
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/MultiSignature'
-      responses:
-        '200':
-          description: ''
-          schema: {}
-  "/api/signatures":
-    put:
-      tags:
-      - Signature
-      summary: ''
-      description: ''
-      operationId: signatures.addSignature
-      produces:
-      - application/json
-      parameters:
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/Signature'
-      responses:
-        '200':
-          description: ''
-          schema: {}
   "/peer/list":
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get a list of peers'
       operationId: transport.listBroadcastPeers
       produces:
       - application/json
@@ -1009,8 +960,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get a list of blocks by ids'
       operationId: transport.commonBlock
       produces:
       - application/json
@@ -1028,8 +978,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get a single block'
       operationId: transport.getBlock
       produces:
       - application/json
@@ -1047,8 +996,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get all blocks'
       operationId: transport.getBlocks
       produces:
       - application/json
@@ -1066,8 +1014,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      description: 'Get all transactions'
       operationId: transport.getTransactions
       produces:
       - application/json
@@ -1078,8 +1025,7 @@ paths:
     post:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Create a new transaction'
       operationId: transport.addTransactions
       produces:
       - application/json
@@ -1100,8 +1046,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get a list of transactions by ids'
       operationId: transport.transactionsFromIds
       produces:
       - application/json
@@ -1119,8 +1064,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain height'
       operationId: transport.height
       produces:
       - application/json
@@ -1132,8 +1076,7 @@ paths:
     get:
       tags:
       - Transport
-      summary: ''
-      description: ''
+      summary: 'Get the blockchain status'
       operationId: transport.status
       produces:
       - application/json
