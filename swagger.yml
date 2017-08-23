@@ -55,7 +55,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -86,13 +87,16 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: orderBy
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: offset
         description: ''
       responses:
@@ -108,15 +112,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
-        name: secret
+      - in: body
+        name: body
         description: ''
-      - type: string
-        name: publicKey
-        description: ''
-      - type: string
-        name: secondSecret
-        description: ''
+        required: true
+        schema:
+          $ref: '#/definitions/AccountDelegate'
       responses:
         '200':
           description: ''
@@ -131,7 +132,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -162,10 +164,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: offset
         description: ''
       responses:
@@ -195,7 +199,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: id
         description: ''
         required: true
@@ -213,31 +218,40 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: orderBy
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: offset
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: generatorPublicKey
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: totalAmount
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: totalFee
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: reward
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: previousBlock
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: height
         description: ''
       responses:
@@ -371,7 +385,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -389,11 +404,13 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: q
         description: ''
         required: true
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
       responses:
@@ -410,7 +427,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: publicKey
         description: ''
         required: true
@@ -428,10 +446,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: publicKey
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: username
         description: ''
       responses:
@@ -448,13 +468,16 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: orderBy
-        name: address
+      - in: query
+        type: string
+        name: orderBy
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: offset
         description: ''
       responses:
@@ -470,22 +493,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
-        name: secret
+      - in: body
+        name: body
         description: ''
         required: true
-      - type: string
-        name: publicKey
-        description: ''
-        required: true
-      - type: string
-        name: secondSecret
-        description: ''
-        required: true
-      - type: string
-        name: username
-        description: ''
-        required: true
+        schema:
+          $ref: '#/definitions/Delegate'
       responses:
         '200':
           description: ''
@@ -500,7 +513,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -518,7 +532,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: generatorPublicKey
         description: ''
         required: true
@@ -536,7 +551,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -554,11 +570,13 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: secret
         description: ''
         required: true
-      - type: string
+      - in: query
+        type: string
         name: publicKey
         description: ''
       responses:
@@ -575,11 +593,13 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: secret
         description: ''
         required: true
-      - type: string
+      - in: query
+        type: string
         name: publicKey
         description: ''
       responses:
@@ -595,11 +615,6 @@ paths:
       operationId: signature.status
       produces:
       - application/json
-      parameters:
-      - type: array
-        name: signatures
-        description: ''
-        required: true
       responses:
         '200':
           description: ''
@@ -640,7 +655,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: publicKey
         description: ''
         required: true
@@ -658,17 +674,21 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: secret
         description: ''
         required: true
-      - type: string
+      - in: query
+        type: string
         name: secondSecret
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: publicKey
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: transactionId
         description: ''
         required: true
@@ -699,11 +719,13 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: ip
         description: ''
         required: true
-      - type: integer
+      - in: query
+        type: integer
         name: port
         description: ''
         required: true
@@ -721,25 +743,32 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: integer
+      - in: query
+        type: integer
         name: port
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: state
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: os
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: version
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: orderBy
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: offset
         description: ''
       responses:
@@ -769,7 +798,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -787,7 +817,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: id
         description: ''
         required: true
@@ -805,43 +836,56 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: blockId
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: limit
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: type
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: orderBy
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: offset
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: senderPublicKey
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: vendorField
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: ownerPublicKey
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: ownerAddress
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: senderId
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: recipientId
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: amount
         description: ''
-      - type: integer
+      - in: query
+        type: integer
         name: fee
         description: ''
       responses:
@@ -857,30 +901,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
-        name: secret
+      - in: body
+        name: body
         description: ''
         required: true
-      - type: integer
-        name: amount
-        description: ''
-        required: true
-      - type: string
-        name: recipientId
-        description: ''
-        required: true
-      - type: string
-        name: vendorField
-        description: ''
-      - type: string
-        name: publicKey
-        description: ''
-      - type: string
-        name: secondSecret
-        description: ''
-      - type: string
-        name: multisigAccountPublicKey
-        description: ''
+        schema:
+          $ref: '#/definitions/Transaction'
       responses:
         '200':
           description: ''
@@ -895,7 +921,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: id
         description: ''
         required: true
@@ -913,10 +940,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: senderPublicKey
         description: ''
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
       responses:
@@ -933,28 +962,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
-        name: secret
+      - in: body
+        name: body
         description: ''
         required: true
-      - type: string
-        name: publicKey
-        description: ''
-      - type: string
-        name: secondSecret
-        description: ''
-      - type: integer
-        name: min
-        description: ''
-        required: true
-      - type: integer
-        name: lifetime
-        description: ''
-        required: true
-      - type: array
-        name: keysgroup
-        description: ''
-        required: true
+        schema:
+          $ref: '#/definitions/MultiSignature'
       responses:
         '200':
           description: ''
@@ -969,22 +982,12 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
-        name: secret
+      - in: body
+        name: body
         description: ''
         required: true
-      - type: string
-        name: secondSecret
-        description: ''
-        required: true
-      - type: string
-        name: publicKey
-        description: ''
-        required: true
-      - type: string
-        name: multisigAccountPublicKey
-        description: ''
-        required: true
+        schema:
+          $ref: '#/definitions/Signature'
       responses:
         '200':
           description: ''
@@ -1012,7 +1015,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: ids
         description: ''
         required: true
@@ -1030,7 +1034,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -1048,7 +1053,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: address
         description: ''
         required: true
@@ -1078,10 +1084,14 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: array
+      - in: body
         name: transactions
         description: ''
         required: true
+        schema:
+          type: array
+          items:
+            $ref: '#/definitions/TransportTransaction'
       responses:
         '200':
           description: ''
@@ -1096,7 +1106,8 @@ paths:
       produces:
       - application/json
       parameters:
-      - type: string
+      - in: query
+        type: string
         name: ids
         description: ''
         required: true
@@ -1130,4 +1141,116 @@ paths:
         '200':
           description: ''
           schema: {}
-definitions: {}
+definitions:
+  TransportTransaction:
+    type: object
+    properties:
+      transactions:
+        type: array
+        description: ''
+        # required: true
+  Transaction:
+    type: object
+    properties:
+      secret:
+        type: string
+        description: ''
+        # required: true
+      amount:
+        type: integer
+        description: ''
+        # required: true
+      recipientId:
+        type: string
+        description: ''
+        # required: true
+      vendorField:
+        type: string
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      secondSecret:
+        type: string
+        description: ''
+      multisigAccountPublicKey:
+        type: string
+        description: ''
+  MultiSignature:
+    type: object
+    properties:
+      secret:
+        type: string
+        description: ''
+        # required: true
+      publicKey:
+        type: string
+        description: ''
+      secondSecret:
+        type: string
+        description: ''
+      min:
+        type: string
+        description: ''
+        # required: true
+      lifetime:
+        type: string
+        description: ''
+        # required: true
+      keysgroup:
+        type: array
+        description: ''
+        # required: true
+        items:
+          type: string
+  Signature:
+    type: object
+    properties:
+      secret:
+        type: string
+        description: ''
+        # required: true
+      secondSecret:
+        type: string
+        description: ''
+        # required: true
+      publicKey:
+        type: string
+        description: ''
+        # required: true
+      multisigAccountPublicKey:
+        type: string
+        description: ''
+        # required: true
+  AccountDelegate:
+    type: object
+    properties:
+      secret:
+        type: string
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      secondSecret:
+        type: string
+        description: ''
+  Delegate:
+    type: object
+    properties:
+      secret:
+        type: string
+        description: ''
+        # required: true
+      publicKey:
+        type: string
+        description: ''
+        # required: true
+      secondSecret:
+        type: string
+        description: ''
+        # required: true
+      username:
+        type: string
+        description: ''
+        # required: true
+
