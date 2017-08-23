@@ -74,7 +74,12 @@ paths:
       - Account
       summary: 'Get the balance of an account'
       operationId: accounts.getBalance
+      produces:
+      - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -93,6 +98,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -110,6 +118,10 @@ paths:
       operationId: accounts.getDelegatesFee
       produces:
       - application/json
+      parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       responses:
         '200':
           description: ''
@@ -123,6 +135,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: orderBy
@@ -147,6 +162,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: body
         name: body
         description: ''
@@ -166,6 +184,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -196,6 +217,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: integer
         name: limit
@@ -229,6 +253,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: id
@@ -247,6 +274,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: integer
         name: limit
@@ -404,6 +434,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -422,6 +455,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: q
@@ -444,6 +480,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: publicKey
@@ -462,6 +501,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: publicKey
@@ -483,6 +525,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: orderBy
@@ -507,6 +552,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: body
         name: body
         description: ''
@@ -526,6 +574,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -544,6 +595,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: generatorPublicKey
@@ -562,6 +616,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -580,6 +637,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: secret
@@ -602,6 +662,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: secret
@@ -660,6 +723,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: publicKey
@@ -678,6 +744,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: secret
@@ -709,6 +778,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: body
         name: body
         description: ''
@@ -740,6 +812,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: ip
@@ -763,6 +838,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: integer
         name: port
@@ -816,6 +894,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -834,6 +915,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: body
         name: body
         description: ''
@@ -853,6 +937,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: id
@@ -871,6 +958,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: blockId
@@ -935,6 +1025,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: body
         name: body
         description: ''
@@ -954,6 +1047,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: id
@@ -972,6 +1068,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: senderPublicKey
@@ -1005,6 +1104,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: ids
@@ -1023,6 +1125,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -1041,6 +1146,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: address
@@ -1070,6 +1178,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: body
         name: transactions
         description: ''
@@ -1091,6 +1202,9 @@ paths:
       produces:
       - application/json
       parameters:
+      - $ref: '#/parameters/nethashHeader'
+      - $ref: '#/parameters/versionHeader'
+      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: ids
