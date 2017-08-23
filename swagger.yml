@@ -1142,29 +1142,10 @@ paths:
           description: ''
           schema: {}
 definitions:
-  TransportTransaction:
-    type: object
-    properties:
-      transactions:
-        type: array
-        description: ''
-        # required: true
-  Transaction:
+  AccountDelegate:
     type: object
     properties:
       secret:
-        type: string
-        description: ''
-        # required: true
-      amount:
-        type: integer
-        description: ''
-        # required: true
-      recipientId:
-        type: string
-        description: ''
-        # required: true
-      vendorField:
         type: string
         description: ''
       publicKey:
@@ -1173,9 +1154,25 @@ definitions:
       secondSecret:
         type: string
         description: ''
-      multisigAccountPublicKey:
+  Delegate:
+    type: object
+    properties:
+      secret:
         type: string
         description: ''
+        # required: true
+      publicKey:
+        type: string
+        description: ''
+        # required: true
+      secondSecret:
+        type: string
+        description: ''
+        # required: true
+      username:
+        type: string
+        description: ''
+        # required: true
   MultiSignature:
     type: object
     properties:
@@ -1222,10 +1219,22 @@ definitions:
         type: string
         description: ''
         # required: true
-  AccountDelegate:
+  Transaction:
     type: object
     properties:
       secret:
+        type: string
+        description: ''
+        # required: true
+      amount:
+        type: integer
+        description: ''
+        # required: true
+      recipientId:
+        type: string
+        description: ''
+        # required: true
+      vendorField:
         type: string
         description: ''
       publicKey:
@@ -1234,23 +1243,13 @@ definitions:
       secondSecret:
         type: string
         description: ''
-  Delegate:
+      multisigAccountPublicKey:
+        type: string
+        description: ''
+  TransportTransaction:
     type: object
     properties:
-      secret:
-        type: string
+      transactions:
+        type: array
         description: ''
         # required: true
-      publicKey:
-        type: string
-        description: ''
-        # required: true
-      secondSecret:
-        type: string
-        description: ''
-        # required: true
-      username:
-        type: string
-        description: ''
-        # required: true
-
