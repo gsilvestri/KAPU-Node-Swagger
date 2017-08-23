@@ -1,13 +1,18 @@
 ---
 swagger: '2.0'
+
 info:
   description: This is a documentation for ark-node built with Swagger UI to make testing a breeze.
   version: 1.0.0
   title: ARK Node Documentation
+
 host: api.arknode.net
+
 basePath: "/"
+
 schemes:
 - https
+
 tags:
 - name: Account
   description: ''
@@ -27,6 +32,7 @@ tags:
   description: ''
 - name: Transport
   description: ''
+
 paths:
   "/api/accounts/getBalance":
     get:
@@ -1084,6 +1090,7 @@ paths:
         '200':
           description: ''
           schema: {}
+
 definitions:
   AccountDelegate:
     type: object
