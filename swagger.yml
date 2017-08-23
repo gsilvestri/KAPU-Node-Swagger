@@ -23,6 +23,7 @@ parameters:
     name: port
     in: header
     type: string
+    default: 4001
     required: true
     minLength: 1
     maxLength: 65535
@@ -37,6 +38,7 @@ parameters:
     name: nethash
     in: header
     type: string
+    default: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
     required: true
     maxLength: 64
 
@@ -44,6 +46,7 @@ parameters:
     name: version
     in: header
     type: string
+    default: 1.0.1
     required: true
     maxLength: 11
 
