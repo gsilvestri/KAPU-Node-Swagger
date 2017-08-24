@@ -11,10 +11,10 @@ host: api.arknode.net
 basePath: "/"
 
 schemes:
-- https
+  - https
 
 produces:
-- application/json
+  - application/json
 
 parameters:
   ipHeader:
@@ -54,41 +54,41 @@ parameters:
     maxLength: 11
 
 tags:
-- name: Account
-  description: ''
-- name: Block
-  description: ''
-- name: Delegate
-  description: ''
-- name: Loader
-  description: ''
-- name: MultiSignature
-  description: ''
-- name: Peer
-  description: ''
-- name: Signature
-  description: ''
-- name: Transaction
-  description: ''
-- name: Transport
-  description: ''
+  - name: Account
+    description: ''
+  - name: Block
+    description: ''
+  - name: Delegate
+    description: ''
+  - name: Loader
+    description: ''
+  - name: MultiSignature
+    description: ''
+  - name: Peer
+    description: ''
+  - name: Signature
+    description: ''
+  - name: Transaction
+    description: ''
+  - name: Transport
+    description: ''
 
 paths:
   "/api/accounts/getBalance":
     get:
       tags:
-      - Account
+        - Account
       summary: 'Get the balance of an account'
       operationId: accounts.getBalance
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -101,18 +101,18 @@ paths:
   "/api/accounts/getPublickey":
     get:
       tags:
-      - Account
+        - Account
       summary: 'Get the public key of an account'
       operationId: accounts.getPublickey
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -125,13 +125,13 @@ paths:
   "/api/accounts/delegates/fee":
     get:
       tags:
-      - Account
+        - Account
       summary: 'Get the delegate fee of an account'
       operationId: accounts.getDelegatesFee
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -144,30 +144,30 @@ paths:
   "/api/accounts/delegates":
     get:
       tags:
-      - Account
+        - Account
       summary: 'Get the delegates of an account'
       operationId: accounts.getDelegates
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
-      - in: query
-        type: string
-        name: orderBy
-        description: ''
-      - in: query
-        type: integer
-        name: limit
-        description: ''
-      - in: query
-        type: integer
-        name: offset
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
+        - in: query
+          type: string
+          name: orderBy
+          description: ''
+        - in: query
+          type: integer
+          name: limit
+          description: ''
+        - in: query
+          type: integer
+          name: offset
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -180,19 +180,19 @@ paths:
     put:
       deprecated: true
       tags:
-      - Account
+        - Account
       summary: 'Add a new delegate to an account'
       operationId: accounts.addDelegates
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/AccountsAddDelegatesRequest'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: body
+          name: body
+          description: ''
+          required: true
+          schema:
+            $ref: '#/definitions/AccountsAddDelegatesRequest'
       responses:
         default:
           description: Unexpected error
@@ -205,18 +205,18 @@ paths:
   "/api/accounts":
     get:
       tags:
-      - Account
+        - Account
       summary: 'Returns account information of an address'
       operationId: accounts.getAccount
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -230,13 +230,13 @@ paths:
     get:
       deprecated: true
       tags:
-      - Account
+        - Account
       summary: 'Get a list of accounts'
       operationId: accounts.getAllAccounts
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -249,21 +249,21 @@ paths:
   "/api/accounts/top":
     get:
       tags:
-      - Account
+        - Account
       summary: 'Get a list of top accounts'
       operationId: accounts.top
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: integer
-        name: limit
-        description: ''
-      - in: query
-        type: integer
-        name: offset
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: integer
+          name: limit
+          description: ''
+        - in: query
+          type: integer
+          name: offset
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -277,13 +277,13 @@ paths:
     get:
       deprecated: true
       tags:
-      - Account
+        - Account
       summary: 'Get the count of accounts'
       operationId: accounts.count
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -296,18 +296,18 @@ paths:
   "/api/blocks/get":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get block by id'
       operationId: blocks.getBlock
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: id
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: id
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -320,49 +320,49 @@ paths:
   "/api/blocks":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get all blocks'
       operationId: blocks.getBlocks
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: integer
-        name: limit
-        description: ''
-      - in: query
-        type: string
-        name: orderBy
-        description: ''
-      - in: query
-        type: integer
-        name: offset
-        description: ''
-      - in: query
-        type: string
-        name: generatorPublicKey
-        description: ''
-      - in: query
-        type: integer
-        name: totalAmount
-        description: ''
-      - in: query
-        type: integer
-        name: totalFee
-        description: ''
-      - in: query
-        type: integer
-        name: reward
-        description: ''
-      - in: query
-        type: string
-        name: previousBlock
-        description: ''
-      - in: query
-        type: integer
-        name: height
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: integer
+          name: limit
+          description: ''
+        - in: query
+          type: string
+          name: orderBy
+          description: ''
+        - in: query
+          type: integer
+          name: offset
+          description: ''
+        - in: query
+          type: string
+          name: generatorPublicKey
+          description: ''
+        - in: query
+          type: integer
+          name: totalAmount
+          description: ''
+        - in: query
+          type: integer
+          name: totalFee
+          description: ''
+        - in: query
+          type: integer
+          name: reward
+          description: ''
+        - in: query
+          type: string
+          name: previousBlock
+          description: ''
+        - in: query
+          type: integer
+          name: height
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -375,13 +375,13 @@ paths:
   "/api/blocks/getEpoch":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain epoch'
       operationId: blocks.getEpoch
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -394,13 +394,13 @@ paths:
   "/api/blocks/getHeight":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain height'
       operationId: blocks.getHeight
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -413,13 +413,13 @@ paths:
   "/api/blocks/getNethash":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain nethash'
       operationId: blocks.getNethash
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -432,13 +432,13 @@ paths:
   "/api/blocks/getFee":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the transaction fee for sending "normal" transactions'
       operationId: blocks.getFee
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -451,13 +451,13 @@ paths:
   "/api/blocks/getFees":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the network fees'
       operationId: blocks.getFees
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -470,13 +470,13 @@ paths:
   "/api/blocks/getMilestone":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain milestone'
       operationId: blocks.getMilestone
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -489,13 +489,13 @@ paths:
   "/api/blocks/getReward":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain reward'
       operationId: blocks.getReward
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -508,13 +508,13 @@ paths:
   "/api/blocks/getSupply":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain supply'
       operationId: blocks.getSupply
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -527,13 +527,13 @@ paths:
   "/api/blocks/getStatus":
     get:
       tags:
-      - Block
+        - Block
       summary: 'Get the blockchain status'
       operationId: blocks.getStatus
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -546,18 +546,18 @@ paths:
   "/api/delegates/count":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get the count of delegates'
       operationId: delegates.count
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -570,22 +570,22 @@ paths:
   "/api/delegates/search":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Search for specific delegates'
       operationId: delegates.search
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: q
-        description: ''
-        required: true
-      - in: query
-        type: integer
-        name: limit
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: q
+          description: ''
+          required: true
+        - in: query
+          type: integer
+          name: limit
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -598,18 +598,18 @@ paths:
   "/api/delegates/voters":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get a list of voters for a delegate'
       operationId: delegates.getVoters
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: publicKey
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: publicKey
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -622,21 +622,21 @@ paths:
   "/api/delegates/get":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get a single delegate'
       operationId: delegates.getDelegate
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: publicKey
-        description: ''
-      - in: query
-        type: string
-        name: username
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: publicKey
+          description: ''
+        - in: query
+          type: string
+          name: username
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -649,25 +649,25 @@ paths:
   "/api/delegates":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get all delegates'
       operationId: delegates.getDelegates
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: orderBy
-        description: ''
-      - in: query
-        type: integer
-        name: limit
-        description: ''
-      - in: query
-        type: integer
-        name: offset
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: orderBy
+          description: ''
+        - in: query
+          type: integer
+          name: limit
+          description: ''
+        - in: query
+          type: integer
+          name: offset
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -680,19 +680,19 @@ paths:
     put:
       deprecated: true
       tags:
-      - Delegate
+        - Delegate
       summary: 'Create a new delegate'
       operationId: delegates.addDelegate
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/DelegatesAddDelegateRequest'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: body
+          name: body
+          description: ''
+          required: true
+          schema:
+            $ref: '#/definitions/DelegatesAddDelegateRequest'
       responses:
         default:
           description: Unexpected error
@@ -705,18 +705,18 @@ paths:
   "/api/delegates/fee":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get the delegate fee'
       operationId: delegates.getFee
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -729,18 +729,18 @@ paths:
   "/api/delegates/forging/getForgedByAccount":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get the amount of ARKs forged by an account'
       operationId: delegates.getForgedByAccount
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: generatorPublicKey
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: generatorPublicKey
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -753,18 +753,18 @@ paths:
   "/api/delegates/getNextForgers":
     get:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Get the next forger'
       operationId: delegates.getNextForgers
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -777,22 +777,22 @@ paths:
   "/api/delegates/forging/enable":
     post:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Enable forging for a delegate'
       operationId: delegates.enableForging
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: secret
-        description: ''
-        required: true
-      - in: query
-        type: string
-        name: publicKey
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: secret
+          description: ''
+          required: true
+        - in: query
+          type: string
+          name: publicKey
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -805,22 +805,22 @@ paths:
   "/api/delegates/forging/disable":
     post:
       tags:
-      - Delegate
+        - Delegate
       summary: 'Disable forging for a delegate'
       operationId: delegates.disableForging
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: secret
-        description: ''
-        required: true
-      - in: query
-        type: string
-        name: publicKey
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: secret
+          description: ''
+          required: true
+        - in: query
+          type: string
+          name: publicKey
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -833,13 +833,13 @@ paths:
   "/api/loader/status":
     get:
       tags:
-      - Loader
+        - Loader
       summary: 'Get the blockchain status'
       operationId: loader.status
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -852,13 +852,13 @@ paths:
   "/api/loader/status/sync":
     get:
       tags:
-      - Loader
+        - Loader
       summary: 'Get the synchronisation status of the client'
       operationId: loader.sync
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -871,13 +871,13 @@ paths:
   "/api/loader/autoconfigure":
     get:
       tags:
-      - Loader
+        - Loader
       summary: 'Auto-configure the client loader'
       operationId: loader.autoconfigure
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -890,18 +890,18 @@ paths:
   "/api/multisignatures/pending":
     get:
       tags:
-      - MultiSignature
+        - MultiSignature
       summary: 'Get pending multi signature transactions'
       operationId: multisignatures.pending
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: publicKey
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: publicKey
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -915,31 +915,31 @@ paths:
     post:
       deprecated: true
       tags:
-      - MultiSignature
+        - MultiSignature
       summary: 'Sign a new multi signature'
       operationId: multisignatures.sign
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: secret
-        description: ''
-        required: true
-      - in: query
-        type: string
-        name: secondSecret
-        description: ''
-      - in: query
-        type: string
-        name: publicKey
-        description: ''
-      - in: query
-        type: string
-        name: transactionId
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: secret
+          description: ''
+          required: true
+        - in: query
+          type: string
+          name: secondSecret
+          description: ''
+        - in: query
+          type: string
+          name: publicKey
+          description: ''
+        - in: query
+          type: string
+          name: transactionId
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -953,19 +953,19 @@ paths:
     put:
       deprecated: true
       tags:
-      - MultiSignature
+        - MultiSignature
       summary: 'Create a new multi signature'
       operationId: multisignatures.addMultisignature
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/MultisignaturesAddMultisignatureRequest'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: body
+          name: body
+          description: ''
+          required: true
+          schema:
+            $ref: '#/definitions/MultisignaturesAddMultisignatureRequest'
       responses:
         default:
           description: Unexpected error
@@ -978,13 +978,13 @@ paths:
   "/api/multisignatures/accounts":
     get:
       tags:
-      - MultiSignature
+        - MultiSignature
       summary: 'Get a list of accounts'
       operationId: multisignature.getAccounts
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -997,22 +997,22 @@ paths:
   "/api/peers/get":
     get:
       tags:
-      - Peer
+        - Peer
       summary: 'Get a single peer'
       operationId: peers.getPeer
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - in: query
-        type: string
-        name: ip
-        description: ''
-        required: true
-      - in: query
-        type: integer
-        name: port
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - in: query
+          type: string
+          name: ip
+          description: ''
+          required: true
+        - in: query
+          type: integer
+          name: port
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1025,41 +1025,41 @@ paths:
   "/api/peers":
     get:
       tags:
-      - Peer
+        - Peer
       summary: 'Get all peers'
       operationId: peers.getPeers
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: integer
-        name: port
-        description: ''
-      - in: query
-        type: integer
-        name: state
-        description: ''
-      - in: query
-        type: string
-        name: os
-        description: ''
-      - in: query
-        type: string
-        name: version
-        description: ''
-      - in: query
-        type: string
-        name: orderBy
-        description: ''
-      - in: query
-        type: integer
-        name: limit
-        description: ''
-      - in: query
-        type: integer
-        name: offset
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: integer
+          name: port
+          description: ''
+        - in: query
+          type: integer
+          name: state
+          description: ''
+        - in: query
+          type: string
+          name: os
+          description: ''
+        - in: query
+          type: string
+          name: version
+          description: ''
+        - in: query
+          type: string
+          name: orderBy
+          description: ''
+        - in: query
+          type: integer
+          name: limit
+          description: ''
+        - in: query
+          type: integer
+          name: offset
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -1072,13 +1072,13 @@ paths:
   "/api/peers/version":
     get:
       tags:
-      - Peer
+        - Peer
       summary: 'Get the peer version'
       operationId: peers.version
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -1091,18 +1091,18 @@ paths:
   "/api/signatures/fee":
     get:
       tags:
-      - Signature
+        - Signature
       summary: 'Get the fee for a signature'
       operationId: signatures.fee
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1116,19 +1116,19 @@ paths:
     put:
       deprecated: true
       tags:
-      - Signature
+        - Signature
       summary: 'Create a new signature'
       operationId: signatures.addSignature
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/SignaturesAddSignatureRequest'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: body
+          name: body
+          description: ''
+          required: true
+          schema:
+            $ref: '#/definitions/SignaturesAddSignatureRequest'
       responses:
         default:
           description: Unexpected error
@@ -1141,18 +1141,18 @@ paths:
   "/api/transactions/get":
     get:
       tags:
-      - Transaction
+        - Transaction
       summary: 'Get a single transaction'
       operationId: transactions.getTransaction
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: id
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: id
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1165,65 +1165,65 @@ paths:
   "/api/transactions":
     get:
       tags:
-      - Transaction
+        - Transaction
       summary: 'Get all transactions'
       operationId: transactions.getTransactions
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: blockId
-        description: ''
-      - in: query
-        type: integer
-        name: limit
-        description: ''
-      - in: query
-        type: integer
-        name: type
-        description: ''
-      - in: query
-        type: string
-        name: orderBy
-        description: ''
-      - in: query
-        type: integer
-        name: offset
-        description: ''
-      - in: query
-        type: string
-        name: senderPublicKey
-        description: ''
-      - in: query
-        type: string
-        name: vendorField
-        description: ''
-      - in: query
-        type: string
-        name: ownerPublicKey
-        description: ''
-      - in: query
-        type: string
-        name: ownerAddress
-        description: ''
-      - in: query
-        type: string
-        name: senderId
-        description: ''
-      - in: query
-        type: string
-        name: recipientId
-        description: ''
-      - in: query
-        type: integer
-        name: amount
-        description: ''
-      - in: query
-        type: integer
-        name: fee
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: blockId
+          description: ''
+        - in: query
+          type: integer
+          name: limit
+          description: ''
+        - in: query
+          type: integer
+          name: type
+          description: ''
+        - in: query
+          type: string
+          name: orderBy
+          description: ''
+        - in: query
+          type: integer
+          name: offset
+          description: ''
+        - in: query
+          type: string
+          name: senderPublicKey
+          description: ''
+        - in: query
+          type: string
+          name: vendorField
+          description: ''
+        - in: query
+          type: string
+          name: ownerPublicKey
+          description: ''
+        - in: query
+          type: string
+          name: ownerAddress
+          description: ''
+        - in: query
+          type: string
+          name: senderId
+          description: ''
+        - in: query
+          type: string
+          name: recipientId
+          description: ''
+        - in: query
+          type: integer
+          name: amount
+          description: ''
+        - in: query
+          type: integer
+          name: fee
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -1236,19 +1236,19 @@ paths:
     put:
       deprecated: true
       tags:
-      - Transaction
+        - Transaction
       summary: 'Create a new transaction'
       operationId: transactions.addTransactions
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: body
-        name: body
-        description: ''
-        required: true
-        schema:
-          $ref: '#/definitions/TransactionsAddTransactionsRequest'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: body
+          name: body
+          description: ''
+          required: true
+          schema:
+            $ref: '#/definitions/TransactionsAddTransactionsRequest'
       responses:
         default:
           description: Unexpected error
@@ -1261,18 +1261,18 @@ paths:
   "/api/transactions/unconfirmed/get":
     get:
       tags:
-      - Transaction
+        - Transaction
       summary: 'Get a single unconfirmed transaction'
       operationId: transactions.getUnconfirmedTransaction
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: id
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: id
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1285,21 +1285,21 @@ paths:
   "/api/transactions/unconfirmed":
     get:
       tags:
-      - Transaction
+        - Transaction
       summary: 'Get all unconfirmed transactions'
       operationId: transactions.getUnconfirmedTransactions
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: senderPublicKey
-        description: ''
-      - in: query
-        type: string
-        name: address
-        description: ''
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: senderPublicKey
+          description: ''
+        - in: query
+          type: string
+          name: address
+          description: ''
       responses:
         default:
           description: Unexpected error
@@ -1312,13 +1312,13 @@ paths:
   "/peer/list":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get a list of peers'
       operationId: transport.listBroadcastPeers
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -1331,18 +1331,18 @@ paths:
   "/peer/blocks/common":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get a list of blocks by ids'
       operationId: transport.commonBlock
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: ids
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: ids
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1355,18 +1355,18 @@ paths:
   "/peer/block":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get a single block'
       operationId: transport.getBlock
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1379,18 +1379,18 @@ paths:
   "/peer/blocks":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get all blocks'
       operationId: transport.getBlocks
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: address
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: address
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1403,13 +1403,13 @@ paths:
   "/peer/transactions":
     get:
       tags:
-      - Transport
+        - Transport
       description: 'Get all transactions'
       operationId: transport.getTransactions
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -1421,21 +1421,21 @@ paths:
             $ref: '#/definitions/TransportGetTransactionsResponse'
     post:
       tags:
-      - Transport
+        - Transport
       summary: 'Create a new transaction'
       operationId: transport.addTransactions
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: body
-        name: transactions
-        description: ''
-        required: true
-        schema:
-          type: array
-          items:
-            $ref: '#/definitions/TransportAddTransactionsRequest'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: body
+          name: transactions
+          description: ''
+          required: true
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/TransportAddTransactionsRequest'
       responses:
         default:
           description: Unexpected error
@@ -1448,18 +1448,18 @@ paths:
   "/peer/transactionsFromIds":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get a list of transactions by ids'
       operationId: transport.transactionsFromIds
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
-      - in: query
-        type: string
-        name: ids
-        description: ''
-        required: true
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
+        - in: query
+          type: string
+          name: ids
+          description: ''
+          required: true
       responses:
         default:
           description: Unexpected error
@@ -1472,13 +1472,13 @@ paths:
   "/peer/height":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get the blockchain height'
       operationId: transport.height
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
@@ -1491,13 +1491,13 @@ paths:
   "/peer/status":
     get:
       tags:
-      - Transport
+        - Transport
       summary: 'Get the blockchain status'
       operationId: transport.status
       parameters:
-      - $ref: '#/parameters/nethashHeader'
-      - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
+        - $ref: '#/parameters/nethashHeader'
+        - $ref: '#/parameters/versionHeader'
+        - $ref: '#/parameters/portHeader'
       responses:
         default:
           description: Unexpected error
