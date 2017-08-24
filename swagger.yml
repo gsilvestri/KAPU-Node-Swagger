@@ -925,7 +925,6 @@ paths:
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
-      - $ref: '#/parameters/portHeader'
       - in: query
         type: string
         name: ip
@@ -2170,6 +2169,10 @@ definitions:
       success:
         type: boolean
         description: ''
+      peer:
+        type: boolean
+        description: ''
+        $ref: '#/definitions/Peer'
 
   PeersGetPeersResponse:
     type: object
@@ -2177,12 +2180,23 @@ definitions:
       success:
         type: boolean
         description: ''
+      peers:
+        type: array
+        description: ''
+        items:
+          $ref: '#/definitions/Peer'
 
   PeersVersionResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      version:
+        type: string
+        description: ''
+      build:
+        type: string
         description: ''
 
   SignaturesFeeResponse:
@@ -2482,5 +2496,33 @@ definitions:
         type: string
         description: ''
       version:
+        type: integer
+        description: ''
+
+  Peer:
+    type: object
+    properties:
+      ip:
+        type: string
+        description: ''
+      port:
+        type: integer
+        description: ''
+      version:
+        type: string
+        description: ''
+      errors:
+        type: integer
+        description: ''
+      os:
+        type: string
+        description: ''
+      height:
+        type: string
+        description: ''
+      status:
+        type: string
+        description: ''
+      delay:
         type: integer
         description: ''
