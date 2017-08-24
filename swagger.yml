@@ -287,7 +287,7 @@ paths:
       - in: query
         type: string
         name: id
-        description: 'Get all blocks'
+        description: ''
         required: true
       responses:
         200:
@@ -1799,10 +1799,6 @@ definitions:
       success:
         type: boolean
         description: ''
-      accounts:
-        type: array
-        items:
-          $ref: '#/definitions/TopAccount'
 
   AccountsTopResponse:
     type: object
@@ -1810,6 +1806,10 @@ definitions:
       success:
         type: boolean
         description: ''
+      accounts:
+        type: array
+        items:
+          $ref: '#/definitions/TopAccount'
 
   AccountsCountResponse:
     type: object
@@ -1817,6 +1817,11 @@ definitions:
       success:
         type: boolean
         description: ''
+      block:
+        type: boolean
+        description: ''
+        items:
+          $ref: '#/definitions/Block'
 
   BlocksGetBlockResponse:
     type: object
@@ -1824,6 +1829,9 @@ definitions:
       success:
         type: boolean
         description: ''
+      block:
+        type: array
+        $ref: '#/definitions/Block'
 
   BlocksGetBlocksResponse:
     type: object
@@ -1831,12 +1839,19 @@ definitions:
       success:
         type: boolean
         description: ''
+      blocks:
+        type: array
+        items:
+          $ref: '#/definitions/Block'
 
   BlocksGetEpochResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      epoch:
+        type: string
         description: ''
 
   BlocksGetHeightResponse:
@@ -1845,12 +1860,21 @@ definitions:
       success:
         type: boolean
         description: ''
+      height:
+        type: integer
+        description: ''
+      id:
+        type: integer
+        description: ''
 
   BlocksGetNethashResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      nethash:
+        type: string
         description: ''
 
   BlocksGetFeeResponse:
@@ -1859,12 +1883,30 @@ definitions:
       success:
         type: boolean
         description: ''
+      fee:
+        type: integer
+        description: ''
 
   BlocksGetFeesResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      send:
+        type: integer
+        description: ''
+      vote:
+        type: integer
+        description: ''
+      secondsignature:
+        type: integer
+        description: ''
+      delegate:
+        type: integer
+        description: ''
+      multisignature:
+        type: integer
         description: ''
 
   BlocksGetMilestoneResponse:
@@ -1873,12 +1915,18 @@ definitions:
       success:
         type: boolean
         description: ''
+      milestone:
+        type: integer
+        description: ''
 
   BlocksGetRewardResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      reward:
+        type: integer
         description: ''
 
   BlocksGetSupplyResponse:
@@ -1887,12 +1935,36 @@ definitions:
       success:
         type: boolean
         description: ''
+      supply:
+        type: integer
+        description: ''
 
   BlocksGetStatusResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      epoch:
+        type: string
+        description: ''
+      height:
+        type: integer
+        description: ''
+      fee:
+        type: integer
+        description: ''
+      milestone:
+        type: integer
+        description: ''
+      nethash:
+        type: string
+        description: ''
+      reward:
+        type: integer
+        description: ''
+      supply:
+        type: integer
         description: ''
 
   DelegatesCountResponse:
@@ -2231,4 +2303,56 @@ definitions:
         description: ''
       productivity:
         type: number
+        description: ''
+
+  Block:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: ''
+      version:
+        type: integer
+        description: ''
+      timestamp:
+        type: integer
+        description: ''
+      height:
+        type: integer
+        description: ''
+      previousBlock:
+        type: integer
+        description: ''
+      numberOfTransactions:
+        type: integer
+        description: ''
+      totalAmount:
+        type: integer
+        description: ''
+      totalFee:
+        type: integer
+        description: ''
+      reward:
+        type: integer
+        description: ''
+      payloadLength:
+        type: integer
+        description: ''
+      payloadHash:
+        type: string
+        description: ''
+      generatorPublicKey:
+        type: string
+        description: ''
+      generatorId:
+        type: string
+        description: ''
+      blockSignature:
+        type: string
+        description: ''
+      confirmations:
+        type: integer
+        description: ''
+      totalForged:
+        type: integer
         description: ''
