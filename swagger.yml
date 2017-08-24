@@ -2205,6 +2205,9 @@ definitions:
       success:
         type: boolean
         description: ''
+      fee:
+        type: integer
+        description: ''
 
   SignaturesAddSignatureResponse:
     type: object
