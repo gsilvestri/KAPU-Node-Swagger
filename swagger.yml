@@ -1973,6 +1973,9 @@ definitions:
       success:
         type: boolean
         description: ''
+      count:
+        type: integer
+        description: ''
 
   DelegatesSearchResponse:
     type: object
@@ -1980,6 +1983,11 @@ definitions:
       success:
         type: boolean
         description: ''
+      delegates:
+        type: array
+        description: ''
+        items:
+          $ref: '#/definitions/DelegateSearchResult'
 
   DelegatesGetVotersResponse:
     type: object
@@ -1987,6 +1995,11 @@ definitions:
       success:
         type: boolean
         description: ''
+      accounts:
+        type: boolean
+        description: ''
+        items:
+          $ref: '#/definitions/Voter'
 
   DelegatesGetDelegateResponse:
     type: object
@@ -1994,6 +2007,10 @@ definitions:
       success:
         type: boolean
         description: ''
+      delegate:
+        type: array
+        description: ''
+        $ref: '#/definitions/Voter'
 
   DelegatesGetDelegatesResponse:
     type: object
@@ -2001,6 +2018,11 @@ definitions:
       success:
         type: boolean
         description: ''
+      delegates:
+        type: array
+        description: ''
+        items:
+          $ref: '#/definitions/Delegate'
 
   DelegatesAddDelegateResponse:
     type: object
@@ -2015,12 +2037,24 @@ definitions:
       success:
         type: boolean
         description: ''
+      fee:
+        type: integer
+        description: ''
 
   DelegatesGetForgedByAccountResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      fees:
+        type: integer
+        description: ''
+      rewards:
+        type: integer
+        description: ''
+      forged:
+        type: integer
         description: ''
 
   DelegatesGetNextForgersResponse:
@@ -2029,6 +2063,18 @@ definitions:
       success:
         type: boolean
         description: ''
+      currentBlock:
+        type: integer
+        description: ''
+      currentSlot:
+        type: integer
+        description: ''
+      delegates:
+        type: array
+        description: ''
+        items:
+          type: string
+          description: ''
 
   DelegatesEnableForgingResponse:
     type: object
@@ -2354,5 +2400,43 @@ definitions:
         type: integer
         description: ''
       totalForged:
+        type: integer
+        description: ''
+
+  DelegateSearchResult:
+    type: object
+    properties:
+      username:
+        type: string
+        description: ''
+      address:
+        type: string
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      vote:
+        type: integer
+        description: ''
+      producedblocks:
+        type: integer
+        description: ''
+      missedblocks:
+        type: integer
+        description: ''
+
+  Voter:
+    type: object
+    properties:
+      username:
+        type: string
+        description: ''
+      address:
+        type: string
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      balance:
         type: integer
         description: ''
