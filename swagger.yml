@@ -1847,7 +1847,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       balance:
         type: integer
         description: ''
@@ -1860,7 +1860,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       publicKey:
         type: string
         description: ''
@@ -1870,7 +1870,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       fee:
         type: integer
         description: ''
@@ -1880,7 +1880,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       delegates:
         type: array
         items:
@@ -1904,7 +1904,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       account:
         type: array
         items:
@@ -1915,14 +1915,14 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   AccountsTopResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       accounts:
         type: array
         items:
@@ -1933,7 +1933,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       block:
         type: boolean
         description: ''
@@ -1945,7 +1945,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       block:
         type: array
         $ref: '#/definitions/Block'
@@ -1955,7 +1955,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       blocks:
         type: array
         items:
@@ -1966,7 +1966,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       epoch:
         type: string
         description: ''
@@ -1976,7 +1976,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       height:
         type: integer
         description: ''
@@ -1989,7 +1989,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       nethash:
         type: string
         description: ''
@@ -1999,7 +1999,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       fee:
         type: integer
         description: ''
@@ -2009,7 +2009,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       send:
         type: integer
         description: ''
@@ -2031,7 +2031,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       milestone:
         type: integer
         description: ''
@@ -2041,7 +2041,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       reward:
         type: integer
         description: ''
@@ -2051,7 +2051,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       supply:
         type: integer
         description: ''
@@ -2061,7 +2061,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       epoch:
         type: string
         description: ''
@@ -2089,7 +2089,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       count:
         type: integer
         description: ''
@@ -2099,7 +2099,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       delegates:
         type: array
         description: ''
@@ -2111,7 +2111,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       accounts:
         type: boolean
         description: ''
@@ -2123,7 +2123,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       delegate:
         type: array
         description: ''
@@ -2134,7 +2134,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       delegates:
         type: array
         description: ''
@@ -2146,14 +2146,14 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   DelegatesGetFeeResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       fee:
         type: integer
         description: ''
@@ -2163,7 +2163,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       fees:
         type: integer
         description: ''
@@ -2179,7 +2179,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       currentBlock:
         type: integer
         description: ''
@@ -2198,21 +2198,21 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   DelegatesDisableForgingResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   LoaderStatusResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       loaded:
         type: boolean
         description: ''
@@ -2228,7 +2228,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       syncing:
         type: boolean
         description: ''
@@ -2247,7 +2247,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       network:
         type: array
         description: ''
@@ -2258,35 +2258,35 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   MultisignaturesSignResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   MultisignaturesAddMultisignatureResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   MultisignatureGetAccountsResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   PeersGetPeerResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       peer:
         type: boolean
         description: ''
@@ -2297,7 +2297,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       peers:
         type: array
         description: ''
@@ -2309,7 +2309,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       version:
         type: string
         description: ''
@@ -2322,7 +2322,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       fee:
         type: integer
         description: ''
@@ -2332,14 +2332,14 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransactionsGetTransactionResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       transaction:
         type: array
         description: ''
@@ -2350,7 +2350,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       transactions:
         type: array
         description: ''
@@ -2362,28 +2362,28 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransactionsGetUnconfirmedTransactionResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransactionsGetUnconfirmedTransactionsResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportListBroadcastPeersResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       peers:
         type: array
         description: ''
@@ -2395,49 +2395,49 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportGetBlockResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportGetBlocksResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportGetTransactionsResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportAddTransactionsResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportTransactionsFromIdsResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
 
   TransportHeightResponse:
     type: object
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       height:
         type: integer
         description: ''
@@ -2490,7 +2490,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       height:
         type: integer
         description: ''
@@ -2809,7 +2809,7 @@ definitions:
     properties:
       success:
         type: boolean
-        description: 'Indicates whether or not errors occured'
+        description: 'Indicates whether or not errors occurred'
       error:
         type: string
         description: ''
