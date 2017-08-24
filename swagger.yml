@@ -89,6 +89,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -111,6 +115,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -128,6 +136,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -162,6 +174,10 @@ paths:
         name: offset
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -185,6 +201,10 @@ paths:
         schema:
           $ref: '#/definitions/AccountsAddDelegatesRequest'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -207,6 +227,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -225,6 +249,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -250,6 +278,10 @@ paths:
         name: offset
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -268,6 +300,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -290,6 +326,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -343,6 +383,10 @@ paths:
         name: height
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -360,6 +404,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -377,6 +425,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -394,6 +446,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -411,6 +467,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -428,6 +488,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -445,6 +509,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -462,6 +530,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -479,6 +551,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -496,6 +572,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -518,6 +598,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -544,6 +628,10 @@ paths:
         name: limit
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -566,6 +654,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -591,6 +683,10 @@ paths:
         name: username
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -620,6 +716,10 @@ paths:
         name: offset
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -643,6 +743,10 @@ paths:
         schema:
           $ref: '#/definitions/DelegatesAddDelegateRequest'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -665,6 +769,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -687,6 +795,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -709,6 +821,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -735,6 +851,10 @@ paths:
         name: publicKey
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -761,6 +881,10 @@ paths:
         name: publicKey
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -778,6 +902,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -795,6 +923,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -812,6 +944,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -834,6 +970,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -870,6 +1010,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -894,6 +1038,10 @@ paths:
         schema:
           $ref: '#/definitions/MultisignaturesAddMultisignatureRequest'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -911,6 +1059,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -937,6 +1089,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -982,6 +1138,10 @@ paths:
         name: offset
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -999,6 +1159,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1021,6 +1185,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1045,6 +1213,10 @@ paths:
         schema:
           $ref: '#/definitions/SignaturesAddSignatureRequest'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1067,6 +1239,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1136,6 +1312,10 @@ paths:
         name: fee
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1159,6 +1339,10 @@ paths:
         schema:
           $ref: '#/definitions/TransactionsAddTransactionsRequest'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1181,6 +1365,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1206,6 +1394,10 @@ paths:
         name: address
         description: ''
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1223,6 +1415,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1245,6 +1441,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1267,6 +1467,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1289,6 +1493,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1306,6 +1514,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1330,6 +1542,10 @@ paths:
           items:
             $ref: '#/definitions/TransportAddTransactionsRequest'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1352,6 +1568,10 @@ paths:
         description: ''
         required: true
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1369,6 +1589,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
@@ -1386,6 +1610,10 @@ paths:
       - $ref: '#/parameters/versionHeader'
       - $ref: '#/parameters/portHeader'
       responses:
+        default:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
         200:
           description: successful operation
           schema:
