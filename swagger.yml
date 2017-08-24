@@ -2096,12 +2096,33 @@ definitions:
       success:
         type: boolean
         description: ''
+      loaded:
+        type: boolean
+        description: ''
+      now:
+        type: integer
+        description: ''
+      blocksCount:
+        type: integer
+        description: ''
 
   LoaderSyncResponse:
     type: object
     properties:
       success:
         type: boolean
+        description: ''
+      syncing:
+        type: boolean
+        description: ''
+      blocks:
+        type: number
+        description: ''
+      height:
+        type: integer
+        description: ''
+      id:
+        type: integer
         description: ''
 
   LoaderAutoconfigureResponse:
@@ -2110,6 +2131,10 @@ definitions:
       success:
         type: boolean
         description: ''
+      network:
+        type: array
+        description: ''
+        $ref: '#/definitions/Network'
 
   MultisignaturesPendingResponse:
     type: object
@@ -2438,5 +2463,24 @@ definitions:
         type: string
         description: ''
       balance:
+        type: integer
+        description: ''
+
+  Network:
+    type: object
+    properties:
+      nethash:
+        type: string
+        description: ''
+      token:
+        type: string
+        description: ''
+      symbol:
+        type: string
+        description: ''
+      explorer:
+        type: string
+        description: ''
+      version:
         type: integer
         description: ''
