@@ -840,6 +840,7 @@ paths:
             $ref: '#/definitions/MultisignaturesPendingResponse'
   "/api/multisignatures/sign":
     post:
+      deprecated: true
       tags:
       - MultiSignature
       summary: 'Sign a new multi signature'
