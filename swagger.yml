@@ -2686,3 +2686,13 @@ definitions:
       blockSignature:
         type: string
         description: ''
+
+  Error:
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: ''
+      error:
+        type: string
+        description: ''
