@@ -2266,6 +2266,11 @@ definitions:
       success:
         type: boolean
         description: ''
+      peers:
+        type: array
+        description: ''
+        items:
+          $ref: '#/definitions/Peer'
 
   TransportCommonBlockResponse:
     type: object
@@ -2315,6 +2320,52 @@ definitions:
       success:
         type: boolean
         description: ''
+      height:
+        type: integer
+        description: ''
+      header:
+        type: array
+        description: ''
+        items:
+          id:
+            type: integer
+            description: ''
+          height:
+            type: integer
+            description: ''
+          version:
+            type: integer
+            description: ''
+          totalAmount:
+            type: integer
+            description: ''
+          totalFee:
+            type: integer
+            description: ''
+          reward:
+            type: integer
+            description: ''
+          payloadHash:
+            type: string
+            description: ''
+          payloadLength:
+            type: integer
+            description: ''
+          timestamp:
+            type: integer
+            description: ''
+          numberOfTransactions:
+            type: integer
+            description: ''
+          previousBlock:
+            type: integer
+            description: ''
+          generatorPublicKey:
+            type: string
+            description: ''
+          blockSignature:
+            type: string
+            description: ''
 
   TransportStatusResponse:
     type: object
@@ -2322,6 +2373,19 @@ definitions:
       success:
         type: boolean
         description: ''
+      height:
+        type: integer
+        description: ''
+      forgingAllowed:
+        type: boolean
+        description: ''
+      currentSlot:
+        type: integer
+        description: ''
+      header:
+        type: array
+        description: ''
+        $ref: '#/definitions/TransportPeerHeader'
 
 ####################################################################################################
 ## Model Object Definitions ########################################################################
@@ -2577,4 +2641,47 @@ definitions:
         description: ''
       confirmations:
         type: integer
+        description: ''
+
+  TransportPeerHeader:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: ''
+      height:
+        type: integer
+        description: ''
+      version:
+        type: integer
+        description: ''
+      totalAmount:
+        type: integer
+        description: ''
+      totalFee:
+        type: integer
+        description: ''
+      reward:
+        type: integer
+        description: ''
+      payloadHash:
+        type: string
+        description: ''
+      payloadLength:
+        type: integer
+        description: ''
+      timestamp:
+        type: integer
+        description: ''
+      numberOfTransactions:
+        type: integer
+        description: ''
+      previousBlock:
+        type: integer
+        description: ''
+      generatorPublicKey:
+        type: string
+        description: ''
+      blockSignature:
+        type: string
         description: ''
