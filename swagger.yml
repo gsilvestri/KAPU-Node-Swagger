@@ -146,6 +146,11 @@ paths:
       - $ref: '#/parameters/portHeader'
       - in: query
         type: string
+        name: address
+        description: ''
+        required: true
+      - in: query
+        type: string
         name: orderBy
         description: ''
       - in: query
@@ -207,6 +212,7 @@ paths:
             $ref: '#/definitions/AccountsGetAccountResponse'
   "/api/accounts/getAllAccounts":
     get:
+      deprecated: true
       tags:
       - Account
       summary: 'Get a list of accounts'
@@ -249,6 +255,7 @@ paths:
             $ref: '#/definitions/AccountsTopResponse'
   "/api/accounts/count":
     get:
+      deprecated: true
       tags:
       - Account
       summary: 'Get the count of accounts'
@@ -1381,7 +1388,6 @@ paths:
 
 definitions:
 
-
 ####################################################################################################
 ## Request Object Definitions ######################################################################
 ####################################################################################################
@@ -1715,29 +1721,48 @@ definitions:
 ####################################################################################################
 
   AccountsGetBalanceResponse:
-      type: object
-      properties:
-        success:
-          type: boolean
-          description: 'asd'
-        balance:
-          type: integer
-          description: 'asd'
-        unconfirmedBalance:
-          type: integer
-          description: 'asd'
+    type: object
+    properties:
+      success:
+        type: boolean
+        description: ''
+      balance:
+        type: integer
+        description: ''
+      unconfirmedBalance:
+        type: integer
+        description: ''
 
   AccountsGetPublickeyResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
+      publicKey:
+        type: string
+        description: ''
 
   AccountsGetDelegatesFeeResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
+      fee:
+        type: integer
+        description: ''
 
   AccountsGetDelegatesResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
+      delegates:
+        type: array
+        items:
+          $ref: '#/definitions/Delegate'
 
   AccountsAddDelegatesResponse:
     type: object
@@ -1754,208 +1779,451 @@ definitions:
 
   AccountsGetAccountResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
+      account:
+        type: array
+        items:
+          $ref: '#/definitions/Account'
 
   AccountsGetAllAccountsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
+      accounts:
+        type: array
+        items:
+          $ref: '#/definitions/TopAccount'
 
   AccountsTopResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   AccountsCountResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetBlockResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetBlocksResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetEpochResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetHeightResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetNethashResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetFeeResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetFeesResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetMilestoneResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetRewardResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetSupplyResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   BlocksGetStatusResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesCountResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesSearchResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesGetVotersResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesGetDelegateResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesGetDelegatesResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesAddDelegateResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesGetFeeResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesGetForgedByAccountResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesGetNextForgersResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesEnableForgingResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   DelegatesDisableForgingResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   LoaderStatusResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   LoaderSyncResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   LoaderAutoconfigureResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   MultisignaturesPendingResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   MultisignaturesSignResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   MultisignaturesAddMultisignatureResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   MultisignatureGetAccountsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   PeersGetPeerResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   PeersGetPeersResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   PeersVersionResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   SignaturesFeeResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   SignaturesAddSignatureResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransactionsGetTransactionResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransactionsGetTransactionsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransactionsAddTransactionsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransactionsGetUnconfirmedTransactionResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransactionsGetUnconfirmedTransactionsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportListBroadcastPeersResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportCommonBlockResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportGetBlockResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportGetBlocksResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportGetTransactionsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportAddTransactionsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportTransactionsFromIdsResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportHeightResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
 
   TransportStatusResponse:
     type: object
-    properties: {}
+    properties:
+      success:
+        type: boolean
+        description: ''
+
+####################################################################################################
+## Model Object Definitions ########################################################################
+####################################################################################################
+
+  Account:
+    type: object
+    properties:
+      address:
+        type: string
+        description: ''
+      unconfirmedBalance:
+        type: integer
+        description: ''
+      balance:
+        type: integer
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      unconfirmedSignature:
+        type: integer
+        description: ''
+      secondSignature:
+        type: integer
+        description: ''
+      secondPublicKey:
+        type: string
+        description: ''
+      multisignatures:
+        type: array
+        description: ''
+      u_multisignatures:
+        type: array
+        description: ''
+
+  TopAccount:
+    type: object
+    properties:
+      address:
+        type: string
+        description: ''
+      balance:
+        type: integer
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+
+  Delegate:
+    type: object
+    properties:
+      username:
+        type: string
+        description: ''
+      address:
+        type: string
+        description: ''
+      publicKey:
+        type: string
+        description: ''
+      vote:
+        type: string
+        description: ''
+      producedblocks:
+        type: integer
+        description: ''
+      missedblocks:
+        type: integer
+        description: ''
+      rate:
+        type: integer
+        description: ''
+      approval:
+        type: number
+        description: ''
+      productivity:
+        type: number
+        description: ''
