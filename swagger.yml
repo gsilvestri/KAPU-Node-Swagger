@@ -2222,6 +2222,10 @@ definitions:
       success:
         type: boolean
         description: ''
+      transaction:
+        type: array
+        description: ''
+        $ref: '#/definitions/Transaction'
 
   TransactionsGetTransactionsResponse:
     type: object
@@ -2229,6 +2233,11 @@ definitions:
       success:
         type: boolean
         description: ''
+      transactions:
+        type: array
+        description: ''
+        items:
+          $ref: '#/definitions/Transaction'
 
   TransactionsAddTransactionsResponse:
     type: object
@@ -2527,5 +2536,45 @@ definitions:
         type: string
         description: ''
       delay:
+        type: integer
+        description: ''
+
+  Transaction:
+    type: object
+    properties:
+      id:
+        type: string
+        description: ''
+      blockid:
+        type: integer
+        description: ''
+      type:
+        type: integer
+        description: ''
+      timestamp:
+        type: integer
+        description: ''
+      amount:
+        type: integer
+        description: ''
+      fee:
+        type: integer
+        description: ''
+      senderId:
+        type: string
+        description: ''
+      recipientId:
+        type: string
+        description: ''
+      senderPublicKey:
+        type: string
+        description: ''
+      signature:
+        type: string
+        description: ''
+      asset:
+        type: object
+        description: ''
+      confirmations:
         type: integer
         description: ''
