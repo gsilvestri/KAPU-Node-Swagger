@@ -13,6 +13,9 @@ basePath: "/"
 schemes:
 - https
 
+produces:
+- application/json
+
 parameters:
   ipHeader:
     name: ip
@@ -77,8 +80,6 @@ paths:
       - Account
       summary: 'Get the balance of an account'
       operationId: accounts.getBalance
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -103,8 +104,6 @@ paths:
       - Account
       summary: 'Get the public key of an account'
       operationId: accounts.getPublickey
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -129,8 +128,6 @@ paths:
       - Account
       summary: 'Get the delegate fee of an account'
       operationId: accounts.getDelegatesFee
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -150,8 +147,6 @@ paths:
       - Account
       summary: 'Get the delegates of an account'
       operationId: accounts.getDelegates
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -188,8 +183,6 @@ paths:
       - Account
       summary: 'Add a new delegate to an account'
       operationId: accounts.addDelegates
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -215,8 +208,6 @@ paths:
       - Account
       summary: 'Returns account information of an address'
       operationId: accounts.getAccount
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -242,8 +233,6 @@ paths:
       - Account
       summary: 'Get a list of accounts'
       operationId: accounts.getAllAccounts
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -263,8 +252,6 @@ paths:
       - Account
       summary: 'Get a list of top accounts'
       operationId: accounts.top
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -293,8 +280,6 @@ paths:
       - Account
       summary: 'Get the count of accounts'
       operationId: accounts.count
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -314,8 +299,6 @@ paths:
       - Block
       summary: 'Get block by id'
       operationId: blocks.getBlock
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -340,8 +323,6 @@ paths:
       - Block
       summary: 'Get all blocks'
       operationId: blocks.getBlocks
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -397,8 +378,6 @@ paths:
       - Block
       summary: 'Get the blockchain epoch'
       operationId: blocks.getEpoch
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -418,8 +397,6 @@ paths:
       - Block
       summary: 'Get the blockchain height'
       operationId: blocks.getHeight
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -439,8 +416,6 @@ paths:
       - Block
       summary: 'Get the blockchain nethash'
       operationId: blocks.getNethash
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -460,8 +435,6 @@ paths:
       - Block
       summary: 'Get the transaction fee for sending "normal" transactions'
       operationId: blocks.getFee
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -481,8 +454,6 @@ paths:
       - Block
       summary: 'Get the network fees'
       operationId: blocks.getFees
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -502,8 +473,6 @@ paths:
       - Block
       summary: 'Get the blockchain milestone'
       operationId: blocks.getMilestone
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -523,8 +492,6 @@ paths:
       - Block
       summary: 'Get the blockchain reward'
       operationId: blocks.getReward
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -544,8 +511,6 @@ paths:
       - Block
       summary: 'Get the blockchain supply'
       operationId: blocks.getSupply
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -565,8 +530,6 @@ paths:
       - Block
       summary: 'Get the blockchain status'
       operationId: blocks.getStatus
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -586,8 +549,6 @@ paths:
       - Delegate
       summary: 'Get the count of delegates'
       operationId: delegates.count
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -612,8 +573,6 @@ paths:
       - Delegate
       summary: 'Search for specific delegates'
       operationId: delegates.search
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -642,8 +601,6 @@ paths:
       - Delegate
       summary: 'Get a list of voters for a delegate'
       operationId: delegates.getVoters
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -668,8 +625,6 @@ paths:
       - Delegate
       summary: 'Get a single delegate'
       operationId: delegates.getDelegate
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -697,8 +652,6 @@ paths:
       - Delegate
       summary: 'Get all delegates'
       operationId: delegates.getDelegates
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -730,8 +683,6 @@ paths:
       - Delegate
       summary: 'Create a new delegate'
       operationId: delegates.addDelegate
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -757,8 +708,6 @@ paths:
       - Delegate
       summary: 'Get the delegate fee'
       operationId: delegates.getFee
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -783,8 +732,6 @@ paths:
       - Delegate
       summary: 'Get the amount of ARKs forged by an account'
       operationId: delegates.getForgedByAccount
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -809,8 +756,6 @@ paths:
       - Delegate
       summary: 'Get the next forger'
       operationId: delegates.getNextForgers
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -835,8 +780,6 @@ paths:
       - Delegate
       summary: 'Enable forging for a delegate'
       operationId: delegates.enableForging
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -865,8 +808,6 @@ paths:
       - Delegate
       summary: 'Disable forging for a delegate'
       operationId: delegates.disableForging
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -895,8 +836,6 @@ paths:
       - Loader
       summary: 'Get the blockchain status'
       operationId: loader.status
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -916,8 +855,6 @@ paths:
       - Loader
       summary: 'Get the synchronisation status of the client'
       operationId: loader.sync
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -937,8 +874,6 @@ paths:
       - Loader
       summary: 'Auto-configure the client loader'
       operationId: loader.autoconfigure
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -958,8 +893,6 @@ paths:
       - MultiSignature
       summary: 'Get pending multi signature transactions'
       operationId: multisignatures.pending
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -985,8 +918,6 @@ paths:
       - MultiSignature
       summary: 'Sign a new multi signature'
       operationId: multisignatures.sign
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1025,8 +956,6 @@ paths:
       - MultiSignature
       summary: 'Create a new multi signature'
       operationId: multisignatures.addMultisignature
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1052,8 +981,6 @@ paths:
       - MultiSignature
       summary: 'Get a list of accounts'
       operationId: multisignature.getAccounts
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1073,8 +1000,6 @@ paths:
       - Peer
       summary: 'Get a single peer'
       operationId: peers.getPeer
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1103,8 +1028,6 @@ paths:
       - Peer
       summary: 'Get all peers'
       operationId: peers.getPeers
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1152,8 +1075,6 @@ paths:
       - Peer
       summary: 'Get the peer version'
       operationId: peers.version
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1173,8 +1094,6 @@ paths:
       - Signature
       summary: 'Get the fee for a signature'
       operationId: signatures.fee
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1200,8 +1119,6 @@ paths:
       - Signature
       summary: 'Create a new signature'
       operationId: signatures.addSignature
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1227,8 +1144,6 @@ paths:
       - Transaction
       summary: 'Get a single transaction'
       operationId: transactions.getTransaction
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1253,8 +1168,6 @@ paths:
       - Transaction
       summary: 'Get all transactions'
       operationId: transactions.getTransactions
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1326,8 +1239,6 @@ paths:
       - Transaction
       summary: 'Create a new transaction'
       operationId: transactions.addTransactions
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1353,8 +1264,6 @@ paths:
       - Transaction
       summary: 'Get a single unconfirmed transaction'
       operationId: transactions.getUnconfirmedTransaction
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1379,8 +1288,6 @@ paths:
       - Transaction
       summary: 'Get all unconfirmed transactions'
       operationId: transactions.getUnconfirmedTransactions
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1408,8 +1315,6 @@ paths:
       - Transport
       summary: 'Get a list of peers'
       operationId: transport.listBroadcastPeers
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1429,8 +1334,6 @@ paths:
       - Transport
       summary: 'Get a list of blocks by ids'
       operationId: transport.commonBlock
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1455,8 +1358,6 @@ paths:
       - Transport
       summary: 'Get a single block'
       operationId: transport.getBlock
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1481,8 +1382,6 @@ paths:
       - Transport
       summary: 'Get all blocks'
       operationId: transport.getBlocks
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1507,8 +1406,6 @@ paths:
       - Transport
       description: 'Get all transactions'
       operationId: transport.getTransactions
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1527,8 +1424,6 @@ paths:
       - Transport
       summary: 'Create a new transaction'
       operationId: transport.addTransactions
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1556,8 +1451,6 @@ paths:
       - Transport
       summary: 'Get a list of transactions by ids'
       operationId: transport.transactionsFromIds
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1582,8 +1475,6 @@ paths:
       - Transport
       summary: 'Get the blockchain height'
       operationId: transport.height
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
@@ -1603,8 +1494,6 @@ paths:
       - Transport
       summary: 'Get the blockchain status'
       operationId: transport.status
-      produces:
-      - application/json
       parameters:
       - $ref: '#/parameters/nethashHeader'
       - $ref: '#/parameters/versionHeader'
