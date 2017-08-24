@@ -167,6 +167,7 @@ paths:
           schema:
             $ref: '#/definitions/AccountsGetDelegatesResponse'
     put:
+      deprecated: true
       tags:
       - Account
       summary: 'Add a new delegate to an account'
@@ -624,6 +625,7 @@ paths:
           schema:
             $ref: '#/definitions/DelegatesGetDelegatesResponse'
     put:
+      deprecated: true
       tags:
       - Delegate
       summary: 'Create a new delegate'
@@ -873,6 +875,7 @@ paths:
             $ref: '#/definitions/MultisignaturesSignResponse'
   "/api/multisignatures":
     put:
+      deprecated: true
       tags:
       - MultiSignature
       summary: 'Create a new multi signature'
@@ -1024,6 +1027,7 @@ paths:
             $ref: '#/definitions/SignaturesFeeResponse'
   "/api/signatures":
     put:
+      deprecated: true
       tags:
       - Signature
       summary: 'Create a new signature'
@@ -1137,6 +1141,7 @@ paths:
           schema:
             $ref: '#/definitions/TransactionsGetTransactionsResponse'
     put:
+      deprecated: true
       tags:
       - Transaction
       summary: 'Create a new transaction'
