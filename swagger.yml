@@ -2,7 +2,7 @@
 swagger: '2.0'
 
 info:
-  description: This is a documentation for ark-node built with Swagger UI to make testing a breeze. If you find any issues, come over to [faustbrian/ARK-Node-Swagger](https://github.com/faustbrian/ARK-Node-Swagger) to open an issue, or even better, send a PR that fixes the issue. The test host is provided by **GR33NDRAG0N** from [https://www.arknode.net/](ArkNode.net).
+  description: This is a documentation for ark-node built with Swagger UI to make testing a breeze. If you find any issues, come over to [faustbrian/ARK-Node-Swagger](https://github.com/faustbrian/ARK-Node-Swagger) to open an issue, or even better, send a PR that fixes the issue. The test host is provided by **GR33NDRAG0N** from [ArkNode.net](https://www.arknode.net/).
   version: 1.0.0
   title: ARK Node Documentation
 
