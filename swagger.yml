@@ -179,10 +179,9 @@ paths:
           schema:
             $ref: '#/definitions/AccountsGetDelegatesResponse'
     put:
-      deprecated: true
       tags:
         - Account
-      summary: 'Add a new delegate to an account'
+      summary: 'Vote for a Delegate by Public Key'
       operationId: accounts.addDelegates
       parameters:
         - in: body
