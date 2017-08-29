@@ -18,23 +18,23 @@ produces:
 
 tags:
   - name: Account
-    description: ''
+    description: 'Operations for Accounts'
   - name: Block
-    description: ''
+    description: 'Operations for Blocks'
   - name: Delegate
-    description: ''
+    description: 'Operations for Delegates'
   - name: Loader
-    description: ''
+    description: 'Operations for Loaders'
   - name: MultiSignature
-    description: ''
+    description: 'Operations for Multi-Signatures'
   - name: Peer
-    description: ''
+    description: 'Operations for Peers'
   - name: Signature
-    description: ''
+    description: 'Operations for Signatures'
   - name: Transaction
-    description: ''
+    description: 'Operations for Transactions'
   - name: Transport
-    description: ''
+    description: 'Operations for Transports'
 
 parameters:
   ipHeader:
@@ -91,7 +91,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -114,7 +114,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -155,20 +155,20 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
         - in: query
           type: string
           name: orderBy
-          description: ''
+          description: 'A string that specifies the column by which to sort the records.'
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
         - in: query
           type: integer
           name: offset
-          description: ''
+          description: 'An unsigned integer that specified the number of records to skip.'
       responses:
         default:
           description: Unexpected error
@@ -211,7 +211,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -253,11 +253,11 @@ paths:
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
         - in: query
           type: integer
           name: offset
-          description: ''
+          description: 'An unsigned integer that specified the number of records to skip.'
       responses:
         default:
           description: Unexpected error
@@ -321,19 +321,19 @@ paths:
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
         - in: query
           type: string
           name: orderBy
-          description: ''
+          description: 'A string that specifies the column by which to sort the records.'
         - in: query
           type: integer
           name: offset
-          description: ''
+          description: 'An unsigned integer that specified the number of records to skip.'
         - in: query
           type: string
           name: generatorPublicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
         - in: query
           type: integer
           name: totalAmount
@@ -537,7 +537,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -560,12 +560,12 @@ paths:
         - in: query
           type: string
           name: q
-          description: ''
+          description: 'A search query.'
           required: true
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
       responses:
         default:
           description: Unexpected error
@@ -587,7 +587,7 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
           required: true
       responses:
         default:
@@ -610,11 +610,11 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
         - in: query
           type: string
           name: username
-          description: ''
+          description: 'A valid ARK Delegate username.'
       responses:
         default:
           description: Unexpected error
@@ -636,15 +636,15 @@ paths:
         - in: query
           type: string
           name: orderBy
-          description: ''
+          description: 'A string that specifies the column by which to sort the records.'
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
         - in: query
           type: integer
           name: offset
-          description: ''
+          description: 'An unsigned integer that specified the number of records to skip.'
       responses:
         default:
           description: Unexpected error
@@ -663,7 +663,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: ''
+          description: 'A valid ARK delegate object.'
           required: true
           schema:
             $ref: '#/definitions/DelegatesAddDelegateRequest'
@@ -688,7 +688,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -734,7 +734,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -757,12 +757,12 @@ paths:
         - in: query
           type: string
           name: secret
-          description: ''
+          description: 'A valid ARK Passphrase.'
           required: true
         - in: query
           type: string
           name: publicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
       responses:
         default:
           description: Unexpected error
@@ -784,12 +784,12 @@ paths:
         - in: query
           type: string
           name: secret
-          description: ''
+          description: 'A valid ARK Passphrase.'
           required: true
         - in: query
           type: string
           name: publicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
       responses:
         default:
           description: Unexpected error
@@ -865,7 +865,7 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
           required: true
       responses:
         default:
@@ -889,20 +889,20 @@ paths:
         - in: query
           type: string
           name: secret
-          description: ''
+          description: 'A valid ARK Passphrase.'
           required: true
         - in: query
           type: string
           name: secondSecret
-          description: ''
+          description: 'A valid secondary ARK Passphrase.'
         - in: query
           type: string
           name: publicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
         - in: query
           type: string
           name: transactionId
-          description: ''
+          description: 'A valid transaction ID.'
           required: true
       responses:
         default:
@@ -925,7 +925,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: ''
+          description: 'A valid multi signature object.'
           required: true
           schema:
             $ref: '#/definitions/MultisignaturesAddMultisignatureRequest'
@@ -968,12 +968,12 @@ paths:
         - in: query
           type: string
           name: ip
-          description: ''
+          description: 'A valid server IP.'
           required: true
         - in: query
           type: integer
           name: port
-          description: ''
+          description: 'A valid server Port.'
           required: true
       responses:
         default:
@@ -996,31 +996,31 @@ paths:
         - in: query
           type: integer
           name: port
-          description: ''
+          description: 'A valid server port.'
         - in: query
           type: integer
           name: state
-          description: ''
+          description: 'An unsigned integer that specifies the peer state.'
         - in: query
           type: string
           name: os
-          description: ''
+          description: 'A valid operating system.'
         - in: query
           type: string
           name: version
-          description: ''
+          description: 'A valid ark-node version.'
         - in: query
           type: string
           name: orderBy
-          description: ''
+          description: 'A string that specifies the column by which to sort the records.'
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
         - in: query
           type: integer
           name: offset
-          description: ''
+          description: 'An unsigned integer that specified the number of records to skip.'
       responses:
         default:
           description: Unexpected error
@@ -1060,7 +1060,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -1083,7 +1083,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: ''
+          description: 'A valid signature object.'
           required: true
           schema:
             $ref: '#/definitions/SignaturesAddSignatureRequest'
@@ -1108,7 +1108,7 @@ paths:
         - in: query
           type: string
           name: id
-          description: ''
+          description: 'A valid transaction ID.'
           required: true
       responses:
         default:
@@ -1131,55 +1131,55 @@ paths:
         - in: query
           type: string
           name: blockId
-          description: ''
+          description: 'An unsigned integer that specifies the block ID.'
         - in: query
           type: integer
           name: limit
-          description: ''
+          description: 'An unsigned integer that specifies the maximum number of records.'
         - in: query
           type: integer
           name: type
-          description: ''
+          description: 'An unsigned integer that specifies the transaction type.'
         - in: query
           type: string
           name: orderBy
-          description: ''
+          description: 'A string that specifies the column by which to sort the records.'
         - in: query
           type: integer
           name: offset
-          description: ''
+          description: 'An unsigned integer that specified the number of records to skip.'
         - in: query
           type: string
           name: senderPublicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
         - in: query
           type: string
           name: vendorField
-          description: ''
+          description: 'A string that specifies the SmartBridge used.'
         - in: query
           type: string
           name: ownerPublicKey
-          description: ''
+          description: 'A valid ARK Address.'
         - in: query
           type: string
           name: ownerAddress
-          description: ''
+          description: 'A valid ARK Address.'
         - in: query
           type: string
           name: senderId
-          description: ''
+          description: 'A valid ARK Address.'
         - in: query
           type: string
           name: recipientId
-          description: ''
+          description: 'A valid ARK Address.'
         - in: query
           type: integer
           name: amount
-          description: ''
+          description: 'An unsigned integer that specifies the transaction amount.'
         - in: query
           type: integer
           name: fee
-          description: ''
+          description: 'An unsigned integer that specifies the transaction fee.'
       responses:
         default:
           description: Unexpected error
@@ -1198,7 +1198,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: ''
+          description: 'A valid transaction object.'
           required: true
           schema:
             $ref: '#/definitions/TransactionsAddTransactionsRequest'
@@ -1223,7 +1223,7 @@ paths:
         - in: query
           type: string
           name: id
-          description: ''
+          description: 'A valid unconfirmed transaction ID.'
           required: true
       responses:
         default:
@@ -1246,11 +1246,11 @@ paths:
         - in: query
           type: string
           name: senderPublicKey
-          description: ''
+          description: 'A valid ARK Public Key.'
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
       responses:
         default:
           description: Unexpected error
@@ -1290,7 +1290,7 @@ paths:
         - in: query
           type: string
           name: ids
-          description: ''
+          description: 'A list of block IDs.'
           required: true
       responses:
         default:
@@ -1313,7 +1313,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -1336,7 +1336,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: ''
+          description: 'A valid ARK Address.'
           required: true
       responses:
         default:
@@ -1373,7 +1373,7 @@ paths:
       parameters:
         - in: body
           name: transactions
-          description: ''
+          description: 'A valid transaction object.'
           required: true
           schema:
             type: array
@@ -1400,7 +1400,7 @@ paths:
         - in: query
           type: string
           name: ids
-          description: ''
+          description: 'A list of transaction IDs.'
           required: true
       responses:
         default:
@@ -1473,18 +1473,18 @@ definitions:
   AccountsAddDelegatesRequest:
     type: object
     required:
-    - secret
-    - publicKey
+      - secret
+      - publicKey
     properties:
       secret:
         type: string
-        description: ''
+        description: 'A valid ARK Passphrase.'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
       secondSecret:
         type: string
-        description: ''
+        description: 'A valid secondary ARK Passphrase.'
 
   # AccountsGetAccountRequest:
   #   type: object
@@ -1571,16 +1571,16 @@ definitions:
     properties:
       secret:
         type: string
-        description: ''
+        description: 'A valid ARK Passphrase.'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
       secondSecret:
         type: string
-        description: ''
+        description: 'A valid secondary ARK Passphrase.'
       username:
         type: string
-        description: ''
+        description: 'A valid ARK Delegate username.'
 
   # DelegatesGetFeeRequest:
   #   type: object
@@ -1625,29 +1625,29 @@ definitions:
   MultisignaturesAddMultisignatureRequest:
     type: object
     required:
-    - secret
-    - min
-    - lifetime
-    - keysgroup
+      - secret
+      - min
+      - lifetime
+      - keysgroup
     properties:
       secret:
         type: string
-        description: ''
+        description: 'A valid ARK Passphrase.'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
       secondSecret:
         type: string
-        description: ''
+        description: 'A valid secondary ARK Passphrase.'
       min:
         type: string
         description: ''
       lifetime:
         type: string
-        description: ''
+        description: 'An unsigned integer that specifies the lifetime.'
       keysgroup:
         type: array
-        description: ''
+        description: 'A list of public keys.'
         items:
           type: string
 
@@ -1674,23 +1674,23 @@ definitions:
   SignaturesAddSignatureRequest:
     type: object
     required:
-    - secret
-    - secondSecret
-    - publicKey
-    - multisigAccountPublicKey
+      - secret
+      - secondSecret
+      - publicKey
+      - multisigAccountPublicKey
     properties:
       secret:
         type: string
-        description: ''
+        description: 'A valid ARK Passphrase.'
       secondSecret:
         type: string
-        description: ''
+        description: 'A valid secondary ARK Passphrase.'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
       multisigAccountPublicKey:
         type: string
-        description: ''
+        description: 'A valid multi signature ARK Public Key.'
 
   # TransactionsGetTransactionRequest:
   #   type: object
@@ -1703,31 +1703,31 @@ definitions:
   TransactionsAddTransactionsRequest:
     type: object
     required:
-    - secret
-    - amount
-    - recipientId
+      - secret
+      - amount
+      - recipientId
     properties:
       secret:
         type: string
-        description: ''
+        description: 'A valid ARK Passphrase.'
       amount:
         type: integer
-        description: ''
+        description: 'An amount as unsigned integer.'
       recipientId:
         type: string
-        description: ''
+        description: 'A valid ARK Address.'
       vendorField:
         type: string
-        description: ''
+        description: 'A string that will be used as SmartBridge.'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
       secondSecret:
         type: string
-        description: ''
+        description: 'A valid secondary ARK Passphrase.'
       multisigAccountPublicKey:
         type: string
-        description: ''
+        description: 'A valid multi signature ARK Public Key.'
 
   # TransactionsGetUnconfirmedTransactionRequest:
   #   type: object
@@ -1760,11 +1760,11 @@ definitions:
   TransportAddTransactionsRequest:
     type: object
     required:
-    - transactions
+      - transactions
     properties:
       transactions:
         type: array
-        description: ''
+        description: 'A transaction object that should be processed.'
 
   # TransportTransactionsFromIdsRequest:
   #   type: object
@@ -1803,7 +1803,7 @@ definitions:
         description: 'Indicates whether or not errors occurred'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
 
   AccountsGetDelegatesFeeResponse:
     type: object
@@ -1831,13 +1831,13 @@ definitions:
     properties:
       secret:
         type: string
-        description: ''
+        description: 'A valid ARK Passphrase.'
       publicKey:
         type: string
-        description: ''
+        description: 'A valid ARK Public Key.'
       secondSecret:
         type: string
-        description: ''
+        description: 'A valid secondary ARK Passphrase.'
 
   AccountsGetAccountResponse:
     type: object
