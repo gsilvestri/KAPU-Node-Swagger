@@ -41,11 +41,13 @@ parameters:
     name: ip
     in: header
     type: string
+    description: 'A valid server IP.'
 
   portHeader:
     name: port
     in: header
     type: integer
+    description: 'A valid server port.'
     default: 4001
     required: true
     minLength: 1
@@ -55,12 +57,14 @@ parameters:
     name: os
     in: header
     type: string
+    description: 'A valid operating system.'
     maxLength: 64
 
   nethashHeader:
     name: nethash
     in: header
     type: string
+    description: 'A valid ark-node nethash.'
     default: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
     required: true
     maxLength: 64
@@ -69,6 +73,7 @@ parameters:
     name: version
     in: header
     type: string
+    description: 'A valid ark-node version.'
     default: 1.0.1
     required: true
     maxLength: 11
