@@ -3,7 +3,7 @@ swagger: '2.0'
 
 info:
   description: |
-    _The development and maintenance of the documentation is generously sponsored by the **[ARK Community Fund](https://arkcommunityfund.com)** - Thanks!_
+    _The development and maintenance of the documentation are generously sponsored by the **[ARK Community Fund](https://arkcommunityfund.com)** - Thanks!_
 
     This is a documentation for **[ark-node](https://github.com/ArkEcosystem/ark-node)** built with Swagger UI to make testing a breeze. If you find any issues, come over to **[faustbrian/ARK-Node-Swagger](https://github.com/faustbrian/ARK-Node-Swagger)** to open an issue, or even better, send a PR that fixes the issue.
 

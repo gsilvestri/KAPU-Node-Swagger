@@ -1,4 +1,4 @@
-#### The development and maintenance of the documentation is generously sponsored by the [ARK Community Fund](https://arkcommunityfund.com) - Thanks! :unicorn:
+#### The development and maintenance of the documentation are generously sponsored by the [ARK Community Fund](https://arkcommunityfund.com) - Thanks! :unicorn:
 
 # ARK Node Documentation
 
