@@ -189,6 +189,7 @@ paths:
           schema:
             $ref: '#/definitions/AccountsGetDelegatesResponse'
     put:
+      deprecated: true
       tags:
         - Account
       summary: 'Vote for a Delegate by Public Key'
@@ -759,6 +760,7 @@ paths:
     parameters: *REQUIRED_HEADERS
 
     post:
+      deprecated: true
       tags:
         - Delegate
       summary: 'Enable forging for a delegate'
@@ -786,6 +788,7 @@ paths:
     parameters: *REQUIRED_HEADERS
 
     post:
+      deprecated: true
       tags:
         - Delegate
       summary: 'Disable forging for a delegate'
