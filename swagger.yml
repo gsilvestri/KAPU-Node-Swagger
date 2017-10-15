@@ -960,6 +960,11 @@ paths:
       summary: 'Get a list of accounts'
       operationId: multisignature.getAccounts
       parameters:
+        - in: query
+          type: string
+          name: publicKey
+          description: 'A valid ARK Public Key.'
+          required: true
       responses:
         default:
           description: Unexpected error
