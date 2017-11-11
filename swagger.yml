@@ -3,15 +3,14 @@ swagger: '2.0'
 
 info:
   description: |
-    _The development and maintenance of the documentation are generously sponsored by the **[ARK Community Fund](https://arkcommunityfund.com)** - Thanks!_
+    This is a documentation for **[kapu-node](https://github.com/gsilvestri/kapu-node)** built with Swagger UI to make testing a breeze. If you find any issues, come over to **[nboldrin/KAPU-Node-Swagger](https://github.com/nboldrin/KAPU-Node-Swagger)** to open an issue, or even better, send a PR that fixes the issue.
 
-    This is a documentation for **[ark-node](https://github.com/ArkEcosystem/ark-node)** built with Swagger UI to make testing a breeze. If you find any issues, come over to **[faustbrian/ARK-Node-Swagger](https://github.com/faustbrian/ARK-Node-Swagger)** to open an issue, or even better, send a PR that fixes the issue.
-
-    The **Community SSL Public API** used as test host is provided by **GR33NDRAG0N** from **[ArkNode.net](https://www.arknode.net/)**.
+    The **Community SSL Public API** used as test host is provided from **[KapuNode.net](https://www.kapunode.net/)**.
+    
   version: 1.0.0
-  title: ARK Node Documentation
+  title: KAPU Node Documentation
 
-host: api.arknode.net
+host: api.kapunode.net
 
 basePath: "/"
 
@@ -69,7 +68,7 @@ parameters:
     name: nethash
     in: header
     type: string
-    description: 'A valid ark-node nethash.'
+    description: 'A valid kapu-node nethash.'
     default: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
     required: true
     maxLength: 64
@@ -78,7 +77,7 @@ parameters:
     name: version
     in: header
     type: string
-    description: 'A valid ark-node version.'
+    description: 'A valid kapu-node version.'
     default: 1.0.1
     required: true
     maxLength: 11
@@ -101,7 +100,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -124,7 +123,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -165,7 +164,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
         - in: query
           type: string
@@ -222,7 +221,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -344,7 +343,7 @@ paths:
         - in: query
           type: string
           name: generatorPublicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
         - in: query
           type: integer
           name: totalAmount
@@ -548,7 +547,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -598,7 +597,7 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
           required: true
       responses:
         default:
@@ -621,11 +620,11 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
         - in: query
           type: string
           name: username
-          description: 'A valid ARK Delegate username.'
+          description: 'A valid KAPU Delegate username.'
       responses:
         default:
           description: Unexpected error
@@ -674,7 +673,7 @@ paths:
       parameters:
         - in: body
           name: body
-          description: 'A valid ARK delegate object.'
+          description: 'A valid KAPU delegate object.'
           required: true
           schema:
             $ref: '#/definitions/DelegatesAddDelegateRequest'
@@ -699,7 +698,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -716,7 +715,7 @@ paths:
     get:
       tags:
         - Delegate
-      summary: 'Get the amount of ARKs forged by an account'
+      summary: 'Get the amount of KAPUs forged by an account'
       operationId: delegates.getForgedByAccount
       parameters:
         - in: query
@@ -745,7 +744,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -769,12 +768,12 @@ paths:
         - in: query
           type: string
           name: secret
-          description: 'A valid ARK Passphrase.'
+          description: 'A valid KAPU Passphrase.'
           required: true
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
       responses:
         default:
           description: Unexpected error
@@ -797,12 +796,12 @@ paths:
         - in: query
           type: string
           name: secret
-          description: 'A valid ARK Passphrase.'
+          description: 'A valid KAPU Passphrase.'
           required: true
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
       responses:
         default:
           description: Unexpected error
@@ -878,7 +877,7 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
           required: true
       responses:
         default:
@@ -902,16 +901,16 @@ paths:
         - in: query
           type: string
           name: secret
-          description: 'A valid ARK Passphrase.'
+          description: 'A valid KAPU Passphrase.'
           required: true
         - in: query
           type: string
           name: secondSecret
-          description: 'A valid secondary ARK Passphrase.'
+          description: 'A valid secondary KAPU Passphrase.'
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
         - in: query
           type: string
           name: transactionId
@@ -963,7 +962,7 @@ paths:
         - in: query
           type: string
           name: publicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
           required: true
       responses:
         default:
@@ -1026,7 +1025,7 @@ paths:
         - in: query
           type: string
           name: version
-          description: 'A valid ark-node version.'
+          description: 'A valid kapu-node version.'
         - in: query
           type: string
           name: orderBy
@@ -1078,7 +1077,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -1169,7 +1168,7 @@ paths:
         - in: query
           type: string
           name: senderPublicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
         - in: query
           type: string
           name: vendorField
@@ -1177,19 +1176,19 @@ paths:
         - in: query
           type: string
           name: ownerPublicKey
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
         - in: query
           type: string
           name: ownerAddress
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
         - in: query
           type: string
           name: senderId
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
         - in: query
           type: string
           name: recipientId
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
         - in: query
           type: integer
           name: amount
@@ -1264,11 +1263,11 @@ paths:
         - in: query
           type: string
           name: senderPublicKey
-          description: 'A valid ARK Public Key.'
+          description: 'A valid KAPU Public Key.'
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
       responses:
         default:
           description: Unexpected error
@@ -1331,7 +1330,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -1354,7 +1353,7 @@ paths:
         - in: query
           type: string
           name: address
-          description: 'A valid ARK Address.'
+          description: 'A valid KAPU Address.'
           required: true
       responses:
         default:
@@ -1496,13 +1495,13 @@ definitions:
     properties:
       secret:
         type: string
-        description: 'A valid ARK Passphrase.'
+        description: 'A valid KAPU Passphrase.'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
       secondSecret:
         type: string
-        description: 'A valid secondary ARK Passphrase.'
+        description: 'A valid secondary KAPU Passphrase.'
 
   # AccountsGetAccountRequest:
   #   type: object
@@ -1589,16 +1588,16 @@ definitions:
     properties:
       secret:
         type: string
-        description: 'A valid ARK Passphrase.'
+        description: 'A valid KAPU Passphrase.'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
       secondSecret:
         type: string
-        description: 'A valid secondary ARK Passphrase.'
+        description: 'A valid secondary KAPU Passphrase.'
       username:
         type: string
-        description: 'A valid ARK Delegate username.'
+        description: 'A valid KAPU Delegate username.'
 
   # DelegatesGetFeeRequest:
   #   type: object
@@ -1650,13 +1649,13 @@ definitions:
     properties:
       secret:
         type: string
-        description: 'A valid ARK Passphrase.'
+        description: 'A valid KAPU Passphrase.'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
       secondSecret:
         type: string
-        description: 'A valid secondary ARK Passphrase.'
+        description: 'A valid secondary KAPU Passphrase.'
       min:
         type: string
         description: ''
@@ -1699,16 +1698,16 @@ definitions:
     properties:
       secret:
         type: string
-        description: 'A valid ARK Passphrase.'
+        description: 'A valid KAPU Passphrase.'
       secondSecret:
         type: string
-        description: 'A valid secondary ARK Passphrase.'
+        description: 'A valid secondary KAPU Passphrase.'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
       multisigAccountPublicKey:
         type: string
-        description: 'A valid multi signature ARK Public Key.'
+        description: 'A valid multi signature KAPU Public Key.'
 
   # TransactionsGetTransactionRequest:
   #   type: object
@@ -1727,25 +1726,25 @@ definitions:
     properties:
       secret:
         type: string
-        description: 'A valid ARK Passphrase.'
+        description: 'A valid KAPU Passphrase.'
       amount:
         type: integer
         description: 'An amount as unsigned integer.'
       recipientId:
         type: string
-        description: 'A valid ARK Address.'
+        description: 'A valid KAPU Address.'
       vendorField:
         type: string
         description: 'A string that will be used as SmartBridge.'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
       secondSecret:
         type: string
-        description: 'A valid secondary ARK Passphrase.'
+        description: 'A valid secondary KAPU Passphrase.'
       multisigAccountPublicKey:
         type: string
-        description: 'A valid multi signature ARK Public Key.'
+        description: 'A valid multi signature KAPU Public Key.'
 
   # TransactionsGetUnconfirmedTransactionRequest:
   #   type: object
@@ -1821,7 +1820,7 @@ definitions:
         description: 'Indicates whether or not errors occurred'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
 
   AccountsGetDelegatesFeeResponse:
     type: object
@@ -1849,13 +1848,13 @@ definitions:
     properties:
       secret:
         type: string
-        description: 'A valid ARK Passphrase.'
+        description: 'A valid KAPU Passphrase.'
       publicKey:
         type: string
-        description: 'A valid ARK Public Key.'
+        description: 'A valid KAPU Public Key.'
       secondSecret:
         type: string
-        description: 'A valid secondary ARK Passphrase.'
+        description: 'A valid secondary KAPU Passphrase.'
 
   AccountsGetAccountResponse:
     type: object
