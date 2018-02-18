@@ -3,14 +3,14 @@ swagger: '2.0'
 
 info:
   description: |
-    This is a documentation for **[kapu-node](https://github.com/gsilvestri/kapu-node)** built with Swagger UI to make testing a breeze. If you find any issues, come over to **[nboldrin/KAPU-Node-Swagger](https://github.com/nboldrin/KAPU-Node-Swagger)** to open an issue, or even better, send a PR that fixes the issue.
+    This is a documentation for **[kapu-node](https://github.com/kapucoin/kapu-node)** built with Swagger UI to make testing a breeze. If you find any issues, come over to **[gsilvestri/kapu_node_test_api](https://github.com/gsilvestri/kapu_node_test_api)** to open an issue, or even better, send a PR that fixes the issue.
 
     The **Community SSL Public API** used as test host is provided from **[KapuNode.net](https://www.kapunode.net/)**.
     
   version: 1.0.0
   title: KAPU Node Documentation
 
-host: api.kapunode.net
+host: api.devnet.kapunode.net
 
 basePath: "/"
 
@@ -52,7 +52,7 @@ parameters:
     in: header
     type: integer
     description: 'A valid server port.'
-    default: 4001
+    default: 4100
     required: true
     minLength: 1
     maxLength: 65535
@@ -69,7 +69,7 @@ parameters:
     in: header
     type: string
     description: 'A valid kapu-node nethash.'
-    default: 6e84d08bd299ed97c212c886c98a57e36545c8f5d645ca7eeae63a8bd62d8988
+    default: f1ef11be7a879671b3019a785c9a2c9dbd9d800b05644d26ad132275ffe2dd48
     required: true
     maxLength: 64
 
@@ -78,7 +78,7 @@ parameters:
     in: header
     type: string
     description: 'A valid kapu-node version.'
-    default: 1.0.1
+    default: 0.3.0
     required: true
     maxLength: 11
 

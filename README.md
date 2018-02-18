@@ -1,6 +1,6 @@
 # KAPU Node Documentation
 
-This is a documentation for [kapu-node](https://www.kapunode.net) built with Swagger UI to make testing a breeze.
+This is a documentation for [kapu-node](https://github.com/kapucoin/kapu-node) built with Swagger UI to make testing a breeze.
 
 ## Introduction
 
